@@ -95,35 +95,7 @@ $( document ).ready(function() {
 
     //change color icon on hover
 
-    $("#usuario-login").hover(()=>{
     
-        $("#usuario-login a img").attr("src","/arquivos/BONECO2preto.png");
-    }, 
-    ()=>{
-        $("#usuario-login a img").attr("src","/arquivos/BONECO.png");
-    })
-
-
-
-    $("#usuario-giftlist").hover(()=>{
-    
-        $("#usuario-giftlist a img").attr("src","/arquivos/CORACAO2preto.png");
-    }, 
-    ()=>{
-        $("#usuario-giftlist a img").attr("src","/arquivos/CORACAO2.png");
-    })
-
-
-
-
-
-    $("#usuario-cart").hover(()=>{
-    
-        $("#usuario-cart a.btn-mini-cart img").attr("src","/arquivos/BAG2preto.png");
-    }, 
-    ()=>{
-        $("#usuario-cart a.btn-mini-cart img").attr("src","/arquivos/BAG2.png");
-    })
 
 
 });

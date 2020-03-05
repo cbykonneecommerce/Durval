@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title> Home</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStyles" />
+    <link href="/arquivos/home.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="home-page">
+
+    <div class="page">
+
+        <vtex:template id="Header" />
+
+        <!--  SubTemplate: Header -->
+
+        <!-- /SubTemplate: Header -->
+        <section class="container-fluid">
+            <div class="fullbanner hidden-xs">
+                <vtex:contentPlaceHolder id="bannersegmentado" />
+            </div><!-- .fullbanner -->
+            <div class="fullbanner visible-xs">
+                    <vtex:contentPlaceHolder id="bannersegmentadomob" />
+                </div><!-- .fullbanner -->
+        </section>
+
+        <div class="politicas-comerciais-faixa" style="background-color: #DDD6CC">
+            <div class="politicas-comerciais container visible-md visible-lg">
+                <ul>
+                    <li>
+                        <img src="/arquivos/cartao.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/trocas.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/frete.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/entrega.png" alt="" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="owl-carousel owl-theme visible-xs visible-sm" id="carouselpropostas">
+                <div class="item">
+
+                        <img src="/arquivos/cartao.png" alt="" />
+                </div>
+                <div class="item">
+
+                        <img src="/arquivos/trocas.png" alt="" />
+
+
+                </div>
+                <div class="item">
+                        <img src="/arquivos/frete.png" alt="" />
+
+                </div>
+                <div class="item">
+                        <img src="/arquivos/entrega.png" alt="" />
+                </div>
+               
+            </div>
+        </div>
+
+
+
+        <section id="home-content" class="container">
+
+            <div id="category-extra-middle"></div>
+
+            <div id="category-extra-vitrine-1"></div>
+
+            <div class="showcase-default showcase-owl">
+                <vtex:contentPlaceHolder id="Ofertas" />
+            </div>
+
+            <div id="category-extra-vitrine-2"></div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="">
+                        <img src="/arquivos/desktopbannercol1.png" alt="" />
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="">
+                        <img src="/arquivos/desktopbannercol2.png" alt="" />
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="">
+                        <img src="/arquivos/desktopbannercol3.png" alt="" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="showcase-default showcase-owl">
+                <vtex:contentPlaceHolder id="Lançamentos" />
+            </div>
+
+            <div class="row hidden-xs hidden-sm">
+                <vtex:contentPlaceHolder id="screenwidebanner1" />
+                <vtex:contentPlaceHolder id="screenwidebanner2" />
+            </div>
+
+            <div class="row  visible-xs visible-sm">
+                <vtex:contentPlaceHolder id="screenwidebannermob1" />
+                <vtex:contentPlaceHolder id="screenwidebannermob2" />
+            </div>
+            <div class="row">
+
+                <div class="col-sm-4 hidden-xs" style="margin-top: 80px;">
+                    <h3>IMPERDÍVEL</h3>
+                    <a href=""><img src="/arquivos/imperdivel.png" alt="" /></a>
+
+                </div>
+                <div class="col-sm-8">
+                    <div class="showcase-default showcase-owl">
+                        <vtex:contentPlaceHolder id="imperdivel" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <vtex:contentPlaceHolder id="finalbanner1" />
+                </div>
+                <div class="col-xs-6">
+                    <vtex:contentPlaceHolder id="finalbanner2" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="showcase-default showcase-owl">
+                    <vtex:contentPlaceHolder id="outlet" />
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top:65px;margin-bottom: 65px">
+                <img src="/arquivos/igpreto.png" alt="" style="max-width: 21px;
+                float: left;
+                margin-right: 15px;
+                margin-top: 4px;" />
+                <p style="font-size: 21px;
+                    line-height: 25px;
+                    color: #000;">@DURVALCALCADOS</p>
+                <div>
+
+                </div>
+            </div>
+        </section><!-- #content -->
+
+        <div class="container-fluid">
+            <!-- LightWidget WIDGET -->
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
+                src="https://cdn.lightwidget.com/widgets/7beb0a80075557e1951940fe71fb795d.html" scrolling="no"
+                allowtransparency="true" class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;"></iframe>
+
+        </div>
+        <div class="sobre-durval">
+            <div class="container">
+                <div class="col-sm-6">
+
+                    <vtex.cmc:video />
+                </div>
+                <div class="col-sm-6" id="sobre">
+                    <h3>SOBRE A DURVAL</h3>
+                    <p>
+                        A Durval é uma das primeiras marcas especializadas em calçados para noiva e festa do Brasil,
+                        atuamos neste mercado desde 1999 e com passar do tempo nos tornamos referência.
+                    </p>
+                    <p>
+                        <a href="/institucional/sobre-nos">Saiba Mais</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="category-extra-bottom"></div>
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+
+</body>
+<vtex:template id="commonScripts" />
+
+</html>

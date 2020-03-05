@@ -3,18 +3,35 @@
 
  <header class="header-container">
      
-  
+    <div class="welcome-bar hidden-xs" style="border-bottom: none!important; background-color: white !important;padding: 0;">
+        <div class="container">
+          <div class="row">
+    
+            <div class="help-menu col-xs-3 col-xs-offset-9">
+              <ul class="text-center list-inline">
+                <li ><span><img src="/arquivos/pin.png" style="max-width: 16px;"/>
+                    ATENDIMENTO
+                </span></li>
+                <li ><span><img src="/arquivos/foneouvido.png" style="max-width: 16px;"/>
+                    NOSSAS LOJAS
+                </span></li>
+               
+              </ul>
+            </div><!-- .help-menu -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .welcome-bar -->
  
-     <div class="header" style="margin-bottom: -6px;padding-bottom: 0;">
+     <div class="header" style="margin-bottom: -6px;padding: 0;margin-top: -10px;">
          <div class="container">
              <div class="row" id="headerrow">
  
                  <div class="button-menu-xs col-xs-3 col-sm-1 visible-xs visible-sm">
-                     <button class="btn btn-default btn-open-menu-xs btn-menu-xs" data-id="#menu-mobile"><img src="/arquivos/menu-open.png"  style="max-width:25px"/></button>
+                     <button class="btn btn-default btn-open-menu-xs btn-menu-xs" data-id="#menu-mobile"><img src="/arquivos/vamo.png"  style="max-width:25px"/></button>
                      <div id="menu-mobile" style="display: none;">
                          <div class="header-menu-mobile visible-xs">
-                             <span class="close-menu pull-right btn-menu-xs" data-id="#menu-mobile"><img src="/arquivos/vamo.png" style="max-width:14px" /></span>
-                             <span class="icone-menu"><img src="/arquivos/menu-close.png" style="max-width:25px"/></span>
+                             <span class="close-menu pull-right btn-menu-xs" data-id="#menu-mobile"><img src="/arquivos/menu-close.png" style="max-width:14px" /></span>
+                             <span class="icone-menu"><img src="/arquivos/vamo.png" style="max-width:25px"/></span>
                          </div>
                          <div class="recebe-menu">
                              <!-- RECEBE MENU MOBILE -->
@@ -48,15 +65,12 @@
                          </a>
                     
                  </div><!-- .mini-cart-xs -->
-                 <div class="deptos col-xs-12 col-sm-5 col-md-4 col-lg-7 hidden-xs">
-                     <ul></ul>
-                   <!--<vtex.cmc:departmentNavigator/>--> 
-                </div><!-- .search -->
-                 <div class="search col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                 
+                 <div class="search col-xs-12 col-sm-5 col-md-4 col-lg-4 col-lg-offset-6">
                      <vtex.cmc:fullTextSearchBox/>
                  </div><!-- .search -->
                  
-                 <div class="sing-in col-xs-2 col-md-3 col-lg-2 text-center hidden-xs">
+                 <div class="sing-in col-xs-2 col-md-3 col-lg-3 text-center hidden-xs">
 
                     
                         <ul class="nav navbar-nav">
@@ -103,57 +117,18 @@
                             </li>
                             
                         </ul>
-                    <!--<div class="btn-group icon-dropdown">
-                        <button type="button" class="btn btn-default dropdown-toggle btn-login" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <img src="/arquivos/header_usuario.png" />
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li class=""><a href="/account" title="Fazer Login" class="btn btn-default btn-login">ENTRAR</a></li>
-                          <li class=""><a href="/account/orders" title="Meus Pedidos" class="btn btn-default btn-orders">MEUS
-                              PEDIDOS</a></li>
-                        </ul>
-                      </div>
-                      <div class="btn-group" role="group">
-                        <a href="/giftlist" title="wishlist" class="btn btn-default btn-orders">
-                            <i class="fa fa-list-alt hidden-md hidden-lg"></i>
-                            <span class="visible-lg visible-md">Meus Pedidos</span>
-                        </a>
-                        <div class="mini-cart col-mini-cart">
-                            <a title="Carrinho de Compras" href="/checkout/#/cart" class="btn btn-default btn-block btn-mini-cart">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="hidden-sm mini-cart-label">Meu Carrinho</span>
-                                <span class="badge bg-danger mini-cart-qty-admake">0</span>
-                            </a>
-                            <div id="mini-cart-admake-aux" class="hidden">
-                                <vtex.cmc:miniCart />
-                                <vtex.cmc:AmountItemsInCart />
-                            </div>#mini-cart-admake-aux 
-                            <div id="mini-cart-admake" style="display: none;">
-                                <div class="mini-cart-header"></div>
-                                <div class="mini-cart-itens">
-                                    
-                                </div>
-                                <div class="mini-cart-footer">
-                                    <div class="mini-cart-totais">
-                                        <strong id="mini-cart-admake-total" class="pull-right">recebe valor total </strong>
-                                        <span>Total</span>
-                                    </div>
-                                    <div class="mini-cart-botao">
-                                        <a href="/checkout/#/cart" class="btn btn-block btn-verde btn-finalizar-compra">Fechar Pedido</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                   
                     
                  </div><!-- .sing-in -->
                  
              
  
              </div><!-- .row -->
-             <div class="row">
-                
+             <div class="row" style="width: 893px;margin-left: 10%;">
+                <div class="deptos col-xs-12 col-sm-5 col-md-4 col-lg-12 hidden-xs hidden-sm">
+                    <ul></ul>
+                  <!--<vtex.cmc:departmentNavigator/>--> 
+               </div><!-- .search -->
              </div>
          </div><!-- .container -->
      </div><!-- .header -->

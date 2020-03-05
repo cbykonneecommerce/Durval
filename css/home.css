@@ -1,0 +1,58 @@
+.politicas-comerciais {
+    display: flex;
+    align-items: center;
+}
+.politicas-comerciais ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.sobre-durval {
+    background-color: #8D7573;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.sobre-durval a {
+    color: white;
+    text-decoration: underline;
+}
+
+.sobre-durval p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.politicas-comerciais ul li img{
+    max-width: 90%;
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    #sobre p, #sobre h3 {
+        text-align: center;
+    }
+
+    .sobre-durval {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+
+#carouselpropostas .owl-item .item  img{
+    text-align: center;
+    width: auto;
+    max-height: 42px;
+}
+
+#carouselpropostas .owl-item .item {
+    text-align: center;
+}
+}
