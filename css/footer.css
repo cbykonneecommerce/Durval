@@ -1,0 +1,226 @@
+.footer {
+    margin-top: 38px !important;
+    padding-top: 20px;
+    background-color: white !important;
+}
+
+#newsletter {
+    background-color: #DDD6CC !important;
+}
+
+.social-icons li {
+    margin-right: 29px
+}
+
+.social-icons li a img {
+    max-height: 33px;
+}
+
+.payments li a img {
+    max-width: 280px
+}
+
+.certificates li a img {
+    max-width: 100px
+}
+
+#footercbyk {
+    max-width: 45px;
+}
+
+#footervtex {
+    max-width: 74px;
+}
+
+#middle-footer {
+    border-top: solid 1px #EEE;
+    border-bottom: solid 1px #EEE;
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+.footer-section ul li a {
+    font-size: 11px;
+    line-height: 25px;
+    color: #000
+}
+
+.footer-section ul li span {
+    font-size: 11px;
+    line-height: 25px;
+    color: #000
+}
+
+.footer-title {
+    font-size: 14px;
+    margin-bottom: 17px;
+    font-weight: 400;
+}
+
+.depto-menu-footer {
+    border-bottom: solid 1px #DDD6CC;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.depto-menu-footer .deptos ul li a {
+    font-size: 18px;
+    line-height: 16px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#newsletterwrapper input {
+    height: 38px;
+    border-radius: 0px;
+    border-color: white;
+    font-size: 12px;
+    color: #D4B984;
+    font-family: "Lato";
+    width: 41%;
+    outline: none;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#newsletterwrapper input::placeholder {
+    color: #D4B984;
+    font-family: "Lato";
+}
+
+#newsletterwrapper input:focus {
+    background: #fff;
+}
+
+#emailcatcher {
+    color: white;
+    background-color: #8D7573;
+    padding: 11px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#lastfooter {
+    text-align: right
+}
+
+#lastfooter ul li {
+    margin-bottom: 4em;
+}
+
+#makers {
+    text-align: right;
+}
+
+@media (min-width: 1200px) {
+    .smaller-row {
+        margin-left: 135px !important;
+        margin-right: 135px !important;
+    }
+
+    #newscol{
+        display: flex !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #newsletterwrapper input {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #newsletterwrapper {
+        text-align: center;
+    }
+    #emailcatcher {
+        margin-left: 0;
+    }
+    .footer .smaller-row {
+        margin-top: 31px;
+    }
+    .footer-section {
+        margin-top: 29px;
+    }
+    .footer-title {
+        margin-bottom: 15px;
+    }
+    #middle-footer div ul li:first-child {
+        display: block;
+        margin-bottom: 18px;
+        margin-top: 28px;
+    }
+    .social-icons {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    #makers {
+        margin-top: 25px;
+    }
+    #newsletter .container .row .col-sm-8 {
+        padding-top: 1em !important;
+    }
+    #newsletter h3 {
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px
+    }
+    #newsletter p {
+        text-align: center;
+        font-size: 10px;
+        line-height: 16px
+    }
+    #newsletter h3 img {
+        max-width: 24px;
+        display: block;
+        margin-left: 45%;
+        padding-bottom: 15px;
+    }
+    .depto-menu-footer .deptos {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .depto-menu-footer .deptos ul li a {
+        font-size: 11px;
+        line-height: 12px;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .depto-menu-footer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer {
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+    }
+    #lastfooter {
+        text-align: left;
+    }
+    #lastfooter ul li:last-of-type {
+        text-align: center
+    }
+    .footer .dropbuttom .dropdown-btnf {
+        padding: 6px 0px;
+        color: black;
+        border-bottom: solid 1px black;
+        border-radius: 0;
+        padding-bottom: 13px;
+        margin-bottom: 2em;
+        outline: none;
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+        z-index: 99999;
+    }
+    .footer .dropbuttom .dropdown-btnf i {
+        color: white;
+        background-color: black;
+        padding: 8px;
+        float: right;
+    }
+}

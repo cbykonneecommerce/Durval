@@ -119,9 +119,14 @@
     padding: 0 3px !important;
 }
 
+#menu-mobile ul li {
+    border-top: solid 1px #E4E5E9;
+    padding: 10px 8px 10px 16px;
+}
+
 #menu-mobile ul li a {
     color: #000;
-    font-size: 14px !important;
+    font-size: 12px !important;
     line-height: 30px !important;
     font-weight: 400 !important;
 }
@@ -139,6 +144,7 @@
     line-height: 16px;
     color: #8B8B8B;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .deptos ul li a:hover {
@@ -174,23 +180,28 @@
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+}
+
+.menu-mobile-account hr {
+    display: none;
 }
 
 /* Style the sidenav links and the dropdown button */
 
 .sidenav a, .dropdown-btn {
-    padding: 6px 8px 20px 16px;
+    padding: 17px 8px 17px 16px;
     text-decoration: none;
     font-size: 14px;
-    color: #000;
+    color: #8B8B8B;
     display: block;
+    text-transform: uppercase;
     border: none;
     background: none;
     width: 100%;
     text-align: left;
     cursor: pointer;
     outline: none;
+    border-top: solid 1px #E4E5E9;
 }
 
 /* On mouse-over */
@@ -217,6 +228,7 @@
 .fa-angle-down, .fa-angle-up {
     float: right;
     padding-right: 8px;
+    color: black
 }
 
 #mini-cart-admake .mini-cart-item .nome-produto a {
@@ -299,7 +311,7 @@
         margin-bottom: 19px;
     }
     .header .mini-cart, .header .button-menu-xs {
-        margin-top: 3%;
+        margin-top: 6%;
     }
     #menu-mobile .header-menu-mobile {
         margin-top: 8%;
