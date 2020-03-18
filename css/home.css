@@ -14,11 +14,11 @@
     background-color: #F6DED2;
     padding-top: 100px;
     padding-bottom: 100px;
-    color: white;
+    color: #4D4D4D !important;
 }
 
 .sobre-durval a {
-    color: white;
+    color: #4D4D4D;
     text-decoration: underline;
 }
 
