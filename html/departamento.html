@@ -1,0 +1,131 @@
+
+ <!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+ 
+ <head>
+     <title>Departamento</title>
+     <vtex:metaTags/>
+ 
+     <link href="/arquivos/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+     <link href="/arquivos/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css" />
+     <script src="/arquivos/ion.rangeSlider.min.js"></script>
+ 
+     <vtex:template id="commonStyles" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link href="/arquivos/depto.css" rel="stylesheet" type="text/css" />
+ 
+ </head>
+ 
+ <body id="departament-page">
+ 
+     <div class="page">
+ 
+         <!--  SubTemplate: Header -->
+         <vtex:template id="Header" />
+         <!-- /SubTemplate: Header -->
+                     
+         <div id="departament-extra-top"></div>
+         <div class="container-fluid">
+                <div id="departament-banner">
+                        <!--  placeholder -->
+                        <vtex:contentPlaceHolder id="Banner-Principal" />
+                        <!-- /placeholder -->
+                    </div><!-- #departament-banner   `/checkout/cart/add?sku=${sku}&qty=1&seller=1&redirect=true&sc=1` -->
+         </div>
+
+         <div id="sidenavCTR" style="position: fixed;top: 50%;z-index: 99;background: #b3b3b3;
+         opacity: .8;">
+             <a  onclick="openNav()" id="open"><img src="/arquivos/filter.png" style="width: 50px;"/></a>
+             <a  onclick="closeNav()" id="close"><img src="/arquivos/filter.png" style="width: 50px;"/></a>
+         </div>
+
+       
+         <section id="content" class="container">
+ 
+             <div id="box-bread-brumb">
+                 <vtex.cmc:breadCrumb />
+             </div>
+                     
+             <div id="departament-extra-middle"></div>
+             
+            <div class="depto-text">
+                <vtex:contentPlaceHolder id="depto-texto" />
+            </div>
+             <div class="row">
+ 
+                 <aside class="col-xs-3 col-lg-12 sidebar" id="mySidenav" style="background-color: #fff;">
+                     <div id="departament-navegador">
+                         <!--  Controle: navegador de departamento -->
+                         <vtex.cmc:singleDepartmentNavigator keepCurrentPath="true" />
+                         <!-- /Controle: navegador de departamento -->
+                     
+                         <div id="departament-extra-menu"></div>
+                     </div><!-- #departament-navegador -->          	
+                 </aside><!-- .sidebar -->
+        
+                 <article id="main-content" class="col-xs-12 col-md-12">
+                                                                     
+                     <div class="title-category">
+                         <!--  Controle: Titulo -->
+                         <vtex.cmc:searchTitle />
+                         <!-- /Controle: Titulo -->
+                     </div><!-- .title-category -->
+                             
+                     
+                         
+                     <div id="collections">
+                       
+                         <div class="collection-wrap">
+                             <vtex.cmc:searchResult layout="ef3fcb99-de72-4251-aa57-71fe5b6e149f" itemCount="12"  columnCount="4" />
+                         </div>
+                         
+ 
+                         <div class="showcase-default">
+                             <vtex:contentPlaceHolder id="Destaques" />
+                         </div>
+                         
+ 
+                     </div><!-- #collections -->
+
+                     <div class="depto-text">
+                        <vtex:contentPlaceHolder id="depto-texto-final" />
+                    </div>
+                 
+                 </article><!-- #main-content -->
+ 
+             </div><!-- .row -->
+         
+         </section><!-- #content -->
+                     
+         <div id="departament-extra-bottom"></div>
+ 
+         <!--  SubTemplate: Footer -->
+         <vtex:template id="Footer" />
+         <!-- /SubTemplate: Footer -->
+     
+     </div><!-- .container-fluid -->
+ 
+ </body>
+     <vtex:template id="commonScripts" />
+
+     <script src="/arquivos/pagination.js"></script>
+     <script src="/arquivos/filters.js"></script>
+     <script>
+
+            $("#sidenavCTR #close").hide();
+   
+            function openNav() {
+                document.getElementById("mySidenav").style.left = "0px";
+                document.getElementById("sidenavCTR").style.left = "64%";
+                $("#sidenavCTR #open").hide();
+                $("#sidenavCTR #close").show();
+            }
+   
+            function closeNav() {
+                document.getElementById("mySidenav").style.left = "-880px";
+                document.getElementById("sidenavCTR").style.left = "0%";
+                $("#sidenavCTR #close").hide();
+                $("#sidenavCTR #open").show();
+            }
+        </script>
+ </html>

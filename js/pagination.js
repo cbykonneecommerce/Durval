@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+    $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
+    $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
 
 
     //FILTRO MOBILE
@@ -18,15 +18,37 @@ $(document).ready(function() {
 });
 
 $(window).on('hashchange', function(e){
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+    $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
+    $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
    });
-   $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-   $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+   $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
+   $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
 
    setInterval(()=>{
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>");
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>");
+    $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>");
+    $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>");
    }, 1000)
 
+
+
+
+
+
+   $(".box-item").each( async function(index) {
+    let myId = $(".product-name a span", this).text();
+    myId= parseInt(myId);
+    skusonprod = [];
+    await vtexjs.catalog.getProductWithVariations(myId).done(function(product){
+        console.log(product);
+
+         skusonprod = product.skus.map(element=>{
+            let contentli = `<li><img  src=${element.image}/></li>`
+            return contentli;
+        })
+       
+        
+
+    });
+    $(".product-name", this).prepend(`<ul class="sku-list list-inline">${skusonprod.join(" ")}</ul>`);
+   })
 

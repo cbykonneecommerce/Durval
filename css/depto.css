@@ -1,0 +1,141 @@
+.titulo-sessao {
+    display: none;
+}
+
+.pages .pgCurrent {
+    background-color: #8D7573 !important;
+}
+
+.resultado-busca-filtro .compare {
+    display: none;
+}
+
+.pages li.first, .pages li.last {
+    display: none;
+}
+
+.title-category {
+    display: none !important;
+}
+
+.bread-crumb {
+    margin-top: 35px;
+}
+
+.depto-text p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 20px;
+
+}
+
+.pages li.pgEmpty {
+    background-color: transparent;
+    color: black;
+
+}
+
+.pages li {
+    border: none !important;
+    background-color: transparent;
+}
+
+.resultado-busca-filtro > fieldset select {
+    border: solid 1px #E4E5E9 !important;
+    border-radius: 0 !important;
+    color: black !important;
+}
+
+.resultado-busca-filtro > .orderBy label {
+    font-weight: 400 !important;
+}
+
+#admake-advanced-filter {
+    background-color: transparent !important;
+    border: none !important;
+}
+#admake-advanced-filter > h2  {
+    display: none;
+}
+
+.resultado-busca-filtro {
+    /*background-color: #FCFCFC;*/
+    margin-top: 1em;
+}
+
+#admake-advanced-filter > .box-filtro h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 10px;
+}
+
+.resultado-busca-filtro > fieldset {
+    text-transform: uppercase;
+}
+
+#departament-navegador {
+    border-top: solid 1px #E4E5E9;
+    border-bottom: solid 1px #E4E5E9;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+@media screen and (max-width: 1900px) {
+    .box-banner a img {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .resultado-busca-filtro > fieldset.filterby {
+        display: none;
+    }
+
+    .prateleira.vitrine > ul > li {
+        width: 50% !important;
+    }
+
+    .pager.bottom {
+        margin-top:100px
+    }
+    #mySidenav {
+        z-index: 9999999999;
+        top: 0;
+        left: -880px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-top: 20px;
+        height: 100%;
+        position: fixed;
+        width: 64%;
+        transition: 0.5s;
+        padding-top: 60px;
+        background-color: white;
+    }
+
+    #departament-navegador #admake-advanced-filter {
+        display: block !important;
+    }
+
+    .sub-titulo h3 .caret {
+        float: right;
+    margin-top: 10px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    #sidenavCTR {
+        display: none;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1200px) {
+    #admake-advanced-filter > .box-filtro {
+        display: inline-grid;
+        background-color: white;
+        min-width: 226px;
+        border: solid 1px #E4E5E9;
+    }
+}

@@ -1,7 +1,7 @@
 
 
 setTimeout(function(){
-    $("#admake-advanced-filter > .box-filtro h3").append(`<span class="caret" style="margin-left:16px">`);
+    $("#admake-advanced-filter > .box-filtro h3").append(`<img src="/arquivos/seta-baixo.png" style="max-width: 26px;float: right; margin-top: -18px;"/>`);
 
     $("#admake-advanced-filter .opcoes").hide();
     

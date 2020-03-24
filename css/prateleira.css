@@ -1,0 +1,148 @@
+/*.resultado-busca-filtro .compare, fieldset.filterBy {
+    display: none;
+}
+*/
+
+
+.prateleira .box-item {
+    background-color: white !important;
+    height: 34em;
+    position: relative;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.wrapper-buy-button-asynchronous {
+    text-align: center;
+    visibility:hidden;
+}
+
+.box-item:hover .wrapper-buy-button-asynchronous{
+    visibility: visible;
+}
+
+.box-item:hover {
+    border: solid 1px #8D7573;
+}
+
+.prateleira .btn-add-buy-button-asynchronous {
+  
+    background-color: #8D7573  !important;
+    font-weight: 400 !important;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 0px !important;
+    text-decoration: none;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.prateleira .price .best-price {
+    color: #000  !important ;
+    font-size: 16px !important;
+    line-height: 20px;
+    font-family: 'Lato';
+    display: inline-block !important;
+}
+.prateleira .price .old-price {
+    display: inline-block !important;
+    color: #9B9B9B;
+    margin-right: 1em;
+    font-family: 'Lato';
+}
+
+
+
+.data h3 a {
+    font-size: 16px;
+}
+
+.gift-list-wished, .is-checklist-item {
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+}
+.prateleira .btn-add-buy-button-asynchronous .fa {
+    display: none !important;
+}
+
+.prateleira .product-name a {
+    color: black !important;
+    font-size: 15px !important;
+    line-height: 17px !important;
+}
+select, fieldset {
+
+    outline-style: none;
+}
+
+
+.prateleira .box-item:hover img{
+    opacity: 1 !important;
+  }
+
+
+
+.installment {
+    color: #b3bbd1 !important;
+    display: block;
+    margin-top: 1em;
+}
+
+.title-category {
+  /*  border-bottom: none;*/
+}
+
+
+.prateleira .product-image::after {
+    content: none !important;
+    background: none !important;
+}
+
+.prateleira .box-item:hover img {
+    opacity: 1 !important;
+}
+
+.product-name .sku-list {
+    margin-bottom: 10px;
+}
+
+.product-name .sku-list li{
+    display: inline-block;
+    padding: 5px !important;
+    border: solid 1px #DDD6CC;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.product-name .sku-list li img{
+    width: 26px;
+}
+
+
+@media (max-width: 600px)  {
+    
+    fieldset {
+        
+        margin-top: 1em;
+    }
+    .prateleira .box-item {
+        height: 23em;
+    }
+
+    .product-name .sku-list {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1051px) {
+    .container-fluid {
+        padding-left: 8em;
+        padding-right: 8em;
+    }
+    .n4colunas > ul > li {
+        width: 24.3333% !important;
+    }
+}
+

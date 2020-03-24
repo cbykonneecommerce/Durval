@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title>Institucional</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStyles" />
+    <link href="/arquivos/institucional.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="institucional-page">
+
+    <div class="page">
+
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div id="institucional-extra-top"></div>
+
+        <section id="institucional-content" class="container">
+
+            <div class="row">
+
+
+                <div id="sidenavCTR" style="position: fixed;top: 50%;z-index: 99;background: #b3b3b3;
+                opacity: .8;">
+                    <a onclick="openNav()" id="open"><img src="/arquivos/seta02.png" /></a>
+                    <a onclick="closeNav()" id="close"><img src="/arquivos/seta01.png" /></a>
+                </div>
+
+                <div id="mySidenav" class="col-sm-7 hidden-md hidden-lg">
+                    <h4><b>Antes da Compra</b></h4>
+                    <ul>
+                        <li><a href="/institucional/faq">FAQ</a></li>
+                        <li><a href="/institucional/compra-segura">Compra Segura</a></li>
+                        <li><a href="/institucional/privacidade">Política de Privacidade</a></li>
+                        <li><a href="tel:1134567890">Televendas <br />
+                                <vtex.cmc:telefone /></a></li>
+                    </ul>
+
+                    <h4><b>Comprando</b></h4>
+                    <ul>
+                        <li><a href="/institucional/pagamento">Formas de pagamento</a></li>
+                    </ul>
+
+                    <h4><b>Após a Compra</b></h4>
+                    <ul>
+                        <li><a href="/account/orders">Acompanhe Seu Pedido</a></li>
+                        <li><a href="/institucional/entrega">Prazo de Entrega</a></li>
+                        <li><a href="/institucional/trocas-devolucoes">Trocas e Devoluções</a></li>
+                    </ul>
+
+                    <h4><b>Institucional</b></h4>
+                    <ul>
+                        <li><a href="/institucional/fale-conosco">Fale Conosco</a><br /><br />
+                            <span>Envie-nos um email de contato, com suas sugesôes e críticas.</span>
+                        </li>
+                        <li><a href="/institucional/quem-somos">Quem Somos</a></li>
+                        <li><a href="/institucional/nossas-lojas">Nossas Lojas</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    $("#sidenavCTR #close").hide();
+
+                    function openNav() {
+                        document.getElementById("mySidenav").style.left = "0px";
+                        document.getElementById("sidenavCTR").style.left = "64%";
+                        $("#sidenavCTR #open").hide();
+                        $("#sidenavCTR #close").show();
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.left = "-880px";
+                        document.getElementById("sidenavCTR").style.left = "0%";
+                        $("#sidenavCTR #close").hide();
+                        $("#sidenavCTR #open").show();
+                    }
+                </script>
+                <div class="col-xs-2 hidden-xs desk-sidenav">
+                    <h4><b>Antes da Compra</b></h4>
+                    <ul>
+                        <li><a href="/institucional/compra-segura">Compra Segura</a></li>
+                        <li><a href="/institucional/privacidade">Política de Privacidade</a></li>
+                        <li><a href="tel:+551133118080">Televendas <br />
+                                <vtex.cmc:telefone /></a></li>
+                    </ul>
+
+                    <h4><b>Comprando</b></h4>
+                    <ul>
+                        <li><a href="/institucional/pagamento">Formas de pagamento</a></li>
+                    </ul>
+
+                    <h4><b>Após a Compra</b></h4>
+                    <ul>
+                        <li><a href="/account/orders">Acompanhe Seu Pedido</a></li>
+                        <li><a href="/institucional/entrega">Prazo de Entrega</a></li>
+                        <li><a href="/institucional/trocas-devolucoes">Trocas e Devoluções</a></li>
+                    </ul>
+
+                    <h4><b>Institucional</b></h4>
+                    <ul>
+                        <li><a href="/institucional/fale-conosco">Fale Conosco</a><br /><br />
+                            <span>Envie-nos um email de contato, com suas sugesôes e críticas.</span>
+                        </li>
+                        <li><a href="/institucional/quem-somos">Quem Somos</a></li>
+                        <li><a href="/institucional/nossas-lojas">Nossas Lojas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <h4 style="text-align:center">CENTRAL DE ATENDIMENTO</h4>
+
+
+                   
+
+
+
+                    <vtex:contentPlaceHolder id="conteudo" />
+                </div>
+            </div>
+
+
+
+        </section><!-- #content -->
+
+
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+
+</body>
+<vtex:template id="commonScripts" />
+<script src="/arquivos/faleconosco.js"></script>
+
+</html>>

@@ -1,0 +1,101 @@
+b {
+    color:#4d4d4d;
+}
+
+.desk-sidenav ul li a {
+    color:#4d4d4d;
+}
+
+.store {
+    text-align: center;
+    background-color: #F5EEEA;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    height: 610px;
+}
+
+.store .mapbtn {
+    display: inline-block;
+    color: #845333;
+    border: solid 1px #845333;
+    padding: 5px;
+    margin: 13px;
+}
+.store a, .desk-sidenav a, #mySidenav a {
+    color: #845333;
+}
+
+#institucional-content {
+    margin-top: 2em;
+}
+
+#institucional-content p {
+    line-height: 16px;
+    margin-bottom: 2em;
+}
+
+#institucional-content li {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    list-style: inherit;
+}
+
+#institucional-content li a {
+    color: black;
+}
+
+#institucional-content li span {
+    font-size: 90%;
+    color: black
+}
+
+.store-block {
+    margin-bottom: 3em;
+}
+
+.store-block p {
+    margin-bottom: 0px !important;
+}
+
+.store-block a {
+    color: black
+}
+
+#mySidenav {
+    z-index: 9999999999;
+    top: 0;
+    left: -880px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px;
+    height: 100%;
+    position: fixed;
+    width: 64%;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-color: white;
+}
+
+
+
+.form-control {
+    height: 38px;
+    border-radius: 0px;
+    border-color: white;
+    font-size: 12px;
+    color: black;
+    font-family: "Lato";
+    outline: none;
+    padding-left: 10px;
+    background-color: #EAECED !important;
+}
+
+
+
+
+@media screen and (min-width: 1100px) {
+    #sidenavCTR {
+        display: none;
+    }
+}
