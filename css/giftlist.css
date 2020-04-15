@@ -1,0 +1,481 @@
+#menu-giftlist {
+    background-image: url(/arquivos/backcasamento.jpg);
+    background-size: contain;
+    
+    /*background-position: center center;*/
+    background-repeat: no-repeat;
+   /* opacity: 0.5;*/
+}
+
+#menu-giftlist ul {
+    padding-left: 0em !important;
+    padding-top: 11em;
+    margin-left: 0em;
+    width: 100%;
+}
+
+#menu-giftlist ul li {
+    background-color: #000 !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+#giftlistform .basic label, #giftlistform .image label, #giftlistform #members-box fieldset label, #giftlistform .event fieldset  .giftlistul label{
+    display: block;
+}
+input {
+    border-radius: 0px;
+    color: #000 
+}
+
+.resultado-busca-filtro > fieldset select {
+    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    outline-style: none;
+    box-shadow: none;
+    color:black !important;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-width: 1px 1px 1px;
+    border-style: solid solid solid;
+    border-image: initial;
+    padding: 5px;
+    border-bottom: 1px solid black !important;
+    border-radius: 0px !important;
+}
+
+.glmanager-actions li, .giftlistinfo-actions .list-action li, .list-members li {
+  
+    padding-bottom: 5px;
+}
+
+.glmanager-actions .action-buy a {
+    background-color: transparent;
+    color: #919fc2;
+    font-weight: 200;
+    line-height: 0px;
+    padding: 0px;
+    display: none;
+
+}
+.data h3 a {
+    font-size: 16px;
+}
+
+.gift-list-wished, .is-checklist-item {
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+}
+
+
+
+.giftlistproductsv2  .urlproduct {
+    color: black;
+}
+.giftlistproductsv2 .inputedit.edit,  .giftlistproductsv2 .deletethissku{
+    color: #C52828;
+}
+
+#collections {
+    padding: 10px;
+}
+#refer-a-friend-form-gift-list{
+    padding: 2em;
+}
+
+#legFriendsData , #legMessage{
+    padding-top: 1em
+}
+#giftlistsearchform .giftlistsearchul li select, #giftlistsearchform .giftlistsearchul li input, .giftlistform fieldset .giftlistul li select, .giftlistform fieldset .giftlistul li input, .giftlistform fieldset .giftlistul li textarea {
+    width: 100%;
+}
+label {
+    margin-right: 20px;
+}
+
+
+.giftlistinfo-description {
+    text-transform: uppercase;
+}
+
+.giftlistinfo-actions {
+    margin-top: 2em;
+}
+
+.giftlistinfo-title{
+    margin-bottom: 2em;
+    color: #000;
+}
+
+ li .data .quickview, .giftlist-print-wrapper, .giftlist-insertsku-wrapper, .resultado-busca-filtro .compare, .sendtocart-8, .quickView{
+    display: none !important;
+}
+
+.giftlistinfo-event ul{
+    margin-top: 2em;
+}
+
+
+.giftlistinfo-event .event-title {
+    display: block;
+    font-size: 24px;
+}
+
+.giftlistinfo-event ul li{
+  /*  padding-left: 1em;*/
+    display: inline-block;
+    color: #000;
+}
+
+.giftlistinfo-event {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.giftlistinfo-members .list-members {
+    display: inline-flex;
+}
+.giftlistinfo-members .list-members .member {
+    margin-bottom: 1em;
+    margin-right: 3em;
+}
+
+.giftlistinfo-members .list-members li {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+.member .title, .member li span {
+    text-transform: uppercase;
+}
+
+.giftlistsearchul .glsearch-type, .giftlistsearchul .glsearch-eventlocation,  .giftlistsearchul .glsearch-eventlocation, .giftlistsearchul .glsearch-eventcity{
+    display: none !important;
+}
+
+
+.member .title {
+    margin-bottom: 1em;
+}
+
+#refer-a-friend-form-gift-list {
+    background-color: white !important
+}
+
+#TB_overlay {
+    background-color: black;
+    opacity: 0.5;
+}
+legend {
+    border-bottom: none !important;
+}
+ 
+
+.giftlist-table .giftlist-header {
+    border-bottom: solid 1px #000;
+}
+
+.giftlist-header tr th {
+    height: 40px;
+}
+
+#menu-giftlist ul {
+    padding-left: 2em;
+    padding-top: 8em;
+    
+}
+
+.page-number {
+    background-color: #000 !important;
+}
+#gift-manager {
+    padding-left: 1em;
+}
+#menu-giftlist li a {
+    color: white;
+    text-transform: uppercase;
+    padding:20px;
+    letter-spacing: 1px;
+
+}
+
+#giftlistsearchform .giftlistsearchul li select, #giftlistsearchform .giftlistsearchul li input,
+.giftlistform fieldset .giftlistul li select, .giftlistform  fieldset .giftlistul li input, .giftlistform fieldset  .giftlistul li textarea
+ {
+   
+    border-radius: 0px;
+    color: #000 
+}
+
+#giftlistsearchform .giftlistsearchul li , .giftlistul li{
+    margin-top: 1.5em;
+}
+.glmanager-actions li {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    color: #000 !important;
+}
+
+.giftlist-body-name a {
+    color: #000;
+}
+
+.managelistdelete-6 {
+    color: #C52828;
+}
+
+.giftlist-search {
+    color: #000
+}
+
+#giftlistsearchfind{
+    background-color: #000;
+    color: white !important;
+    border: none;
+    outline-style: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    
+  }
+  
+
+  .giftlistinfo-link input {
+    width: 52%;
+  }
+
+
+.send-to-cart-wrapper {
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+.giftlist-body-action #glstc-10 {
+    background-color: none;
+    text-decoration: none;
+    padding: 0;
+    margin-top: 0;
+}
+  #glstc-10 {
+    background-color: #919fc2;
+    text-decoration: none;
+    padding: 1em;
+    margin-top: 2em;
+    color: white !important;
+
+  }
+
+  .giftlist-body-action #glstc-10 {
+    color: #919fc2;
+    background-color: transparent;
+  }
+
+
+
+  .vitrine.resultItemsWrapper .n3colunas ul li, .vitrine.resultItemsWrapper .n2colunas ul li{
+      text-align: center
+  }
+
+  .data h3 a, .data .category a {
+      color: #777
+  }
+
+
+  /*#TB_ajaxContent {
+    height: auto !important;
+  }*/
+
+  #TB_ajaxContent  input{
+    margin-top: 15px;
+  }
+  /*#TB_window {
+      margin-top: -320px !important;
+  }*/
+
+  .is-checklist-item.from-list.first.last input {
+    min-height: 30px;
+    margin-right: 4px;
+  }
+
+  .hidden-button {
+    margin-top: -37px !important; 
+  }
+
+
+  .giftlist.giftlist-form.giftlist-create #giftlistname{
+    width: 70%;
+  }
+
+  .giftlist.giftlist-form.giftlist-create #giftlisturl {
+      width: 31%;
+  }
+
+  #giftlistmessage, #membersurname1, #membersurname2 {
+      width: 73%;
+  }
+  #giftlisteventlocation {
+    width: 69%;
+  }
+  #membername1, #membername2, #membermail1, #membermail2 {
+    width: 79%;
+  }
+
+  #giftlistv2save, #giftlistv2cancel {
+    width: 89%;
+    margin-top: 1em;
+    background-color: #000;
+    color: white;
+  }
+
+
+
+.product-name {
+    font-size: 22px;
+}
+.product-name  a{
+    color:#777;
+}
+
+.price {
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 1em;
+    font-size: 16px;
+}
+
+
+.buy-buttom {
+    margin-bottom: 1em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    color: white;
+    border: solid 1px #000;
+    font-size: 20px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+
+.buy-buttom a {
+    text-decoration: none;
+}
+
+
+.glmanager-type.giftlisttype-3 h2, .glmanager-type.giftlisttype-4 h2{
+    margin-bottom: 1em;
+}
+
+td{
+    color:#000;
+  }
+  
+
+  .giftlistinfo-actions .list-action li{
+    margin-bottom: 0.7em;
+}
+
+.giftlistinfo-actions .list-action .action-manage {
+    display: block !important;
+}
+
+.giftlistinfo-event-countdown {
+    display: block !important;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.giftlistsku-input-wishedamt {
+    text-align: center;
+}
+.glsearch-title, h2 {
+    font-size: 20px !important;
+}
+.inputedit.edit {
+    margin-left: 1em;
+}
+
+.ko-grid-pageLinks{
+    margin-top: 2em;
+    text-align: center;
+}
+
+.glstat-table-title {
+    display: none;;
+}
+.days {
+    border: solid 1px;
+    padding: 4px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+.action-buy a, .button-send-to-cart, .giftlistinfo-actions .list-action li a{
+    background-color: #000;
+    border: 0 none;
+    border-radius: 6px;
+    line-height: 44px;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 0;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+.list-action {
+    display: inline-flex;
+}
+
+.giftlistinfo-actions .list-action li {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+.buy-buttom {
+    background: #919fc2
+}
+.buy-buttom a{
+    color: white !important;
+}
+
+
+  @media (max-width: 900px)  {
+    
+    .giftlist-table  thead tr th, .giftlist-table tbody tr td{
+        text-align: center;
+
+    }
+
+    #TB_ajaxContent {
+        margin-left: 8em !important;
+        width: 400px !important;
+        height: auto !important;
+    }
+
+    .list-action {
+        display: block;
+    }
+
+    .giftlistinfo-actions .list-action li {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: -0.8em;
+    }
+
+   
+    #menu-giftlist ul {
+        width: 100%;
+        margin-left: 0em;
+        padding-top: 2em;
+    }
+    
+}
