@@ -19,6 +19,7 @@
 
 .box-item:hover .wrapper-buy-button-asynchronous{
     visibility: visible;
+    margin-top: 1.5em;
 }
 
 .box-item:hover {

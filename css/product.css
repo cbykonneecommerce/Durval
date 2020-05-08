@@ -183,6 +183,10 @@
 }
 
 
+.prateleira .box-item {
+    height: 31em !important;
+}
+
 #calculoFrete {
     margin-top: -18px;
 }
