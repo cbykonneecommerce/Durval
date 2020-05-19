@@ -51,7 +51,7 @@
 
 .product-details .product-name .productName {
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 22px;
     
@@ -193,8 +193,9 @@
 .product-description .buy-together-content td.buy .comprar-junto a, .buy-button.buy-button-ref {
     display: block;
     width: 100%;
-    background-color: #000!important;
-    font-weight: 200;
+    background-color: #b4dcb9!important;
+    font-weight: bold;
+    color: black !important;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 26px;
@@ -286,7 +287,7 @@ input.qtd.pull-left {
         font-size: 14px;
         font-weight: 400;
         line-height: 16px;
-        padding: 14px 14px !important;
+        padding: 10px 10px !important;
         border-radius: 100px;
         border: 1px solid #DDD6CC!important;
         /* border-radius: 0; */
@@ -650,10 +651,11 @@ label.item_unavaliable:after {
         text-align: center !important;
     }
     .product-details .codigo-produto span {
-        float: none !important;
+        /*float: none !important;*/
     }
     .product-details .codigo-produto span, .product-details .codigo-produto div {
         display: inline;
+        float: initial;
     }
 
     .product-description-box #description, .product-description-box #specification {
@@ -666,7 +668,7 @@ label.item_unavaliable:after {
 
 .product-image .apresentacao .thumbs {
     
-    left: -60px !important;
+    left: -90px !important;
 }
 
 }
