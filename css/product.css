@@ -57,6 +57,9 @@
     
 }
 
+#opiniao_de_usuario {
+    display: none;
+}
 
 .product-info .discount p {
     font-size: 11px;

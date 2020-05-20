@@ -9,7 +9,7 @@ $( document ).ready(function() {
       
 
         response.forEach(element => {
-            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}">${element.name}</a></li>`);
+            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}?PS=24">${element.name}</a></li>`);
             console.log("adding main")
             if(element.hasChildren) {
             $("#top-menu .container #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
@@ -67,11 +67,11 @@ $( document ).ready(function() {
             element.children.forEach((subs, index) => {
                 console.log("adding children")
                 if( index < 4) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
                 } else if (index < 8) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
                 } else {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
                 }
 
                 $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}">${subs.name}</a>`)
