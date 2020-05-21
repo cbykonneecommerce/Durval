@@ -275,7 +275,7 @@ input.qtd.pull-left {
 }
 
 
-.product-details .seletor-sku .specification {
+.product-details .seletor-sku .specification, .specification-color {
    
     font-weight: 400 !important;
     color: black !important;

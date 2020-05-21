@@ -52,3 +52,5 @@ $(window).on('hashchange', function(e){
     $(".product-name", this).prepend(`<ul class="sku-list list-inline">${skusonprod.join(" ")}</ul>`);
    })
 
+   //fetch("/api/catalog_system/pub/products/search/sandalia-noiva-confort-branca-salto-alto-branco").then((a)=>{return a.json()}).then(f=> console.log(f))
+

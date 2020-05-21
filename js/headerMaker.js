@@ -92,8 +92,21 @@ $( document ).ready(function() {
 
 
 
-
-    //change color icon on hover
+    const mq = window.matchMedia("(max-width: 600px)");
+    if (mq.matches) {
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 200){
+              $('#headerrow fieldset').hide();
+            }
+          });
+        
+          $(window).scroll(function(){
+            if($(document).scrollTop() < 500){
+              $('#headerrow fieldset').show();
+            }
+          });
+    }
+   
 
     
 

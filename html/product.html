@@ -45,8 +45,13 @@
                  <div class="product-image col-xs-12 col-sm-7 col-lg-6 text-center">
                      <!--  Component: Product Images -->
                      <vtex.cmc:ProductImage zoom="on"/>
- 
-                   <!--<vtex.cmc:facebookLike />-->  
+                   <div class="share-btns">
+                       <ul>
+                           <li style="display: inline-block;"><a href="" data-action="share/whatsapp/share" id="wppshare" target="_blank"><img src="/arquivos/wpp.png" alt="Whatsapp" style="width: 27px;"/></a></li>
+                           <li style="display: inline-block;"><a href="" id="fbshare" target="_blank"><img src="/arquivos/facebook-black.png" alt="Facebook" style="width: 40px;"/></a></li>
+                           <li style="display: inline-block;"><a href="" id="pinshare" target="_blank"><img src="/arquivos/pinterest-black.png" alt="Pinterest" style="width: 40px;"/></a></li>
+                       </ul>
+                   </div>
                  </div><!-- .product-image -->
  
                  <div class="product-info col-xs-12 col-sm-5 col-lg-6">
@@ -80,7 +85,12 @@
                          <!--  Component: Payment methods -->
                          <!-- <vtex.cmc:OtherPaymentMethod/> -->
                      </div><!-- .price-box -->
- 
+                     <div class="seletor-color">
+                         <span class="specification-color">Cores</span>
+                         <ul style="margin-top: 1em;">
+
+                         </ul>
+                     </div>
                      <div class="seletor-sku">
                          <vtex.cmc:stockKeepingUnitSelection />
                      </div><!-- .seletor-sku -->
