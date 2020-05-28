@@ -5,33 +5,33 @@ $(".sku-notifyme-form p").text("Avise-me quando estiver disponível");
 
 
 setTimeout(function () {
-    $(".desk-info-nav a#first").css({"color":"#BEBEBE"});
+    $(".desk-info-nav a#first").css({ "color": "#BEBEBE" });
     $(".product-info .shipping-box label", "body").prepend(`<img src="/arquivos/truck.png" style="margin-right: 10px" >`)
     $(".glis-popup-link.glis-thickbox.tb-added.qvBinded", "body").html(`<img src="/arquivos/CORACAO.png" style="max-width: 18px"> ADICIONAR A LISTA DE DESEJOS`);
     $("#TB_closeWindowButton").html(`<img src="/arquivos/menu-close.png" style="max-width:25px"/>`);
 
 
 
-    
+
     $(".share-btns #wppshare").attr("href", 'https://web.whatsapp.com/send?l=en&text=' + encodeURIComponent(window.location.href));
 
     const mq = window.matchMedia("(max-width: 600px)");
     if (mq.matches) {
         if (navigator.userAgent.match(/iPhone|Android/i)) {
             $(".share-btns #wppshare").attr("href", 'https://api.whatsapp.com/send?text=' + encodeURIComponent(window.location.href));
-         }
+        }
     }
-   
-    
-$(".share-btns #fbshare").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
-$(".share-btns #pinshare").attr("href", `https://pinterest.com/pin/create/button/?url=${window.location.href}`);
+
+
+    $(".share-btns #fbshare").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+    $(".share-btns #pinshare").attr("href", `https://pinterest.com/pin/create/button/?url=${window.location.href}`);
 }, 1000);
 
 
-$(".desk-info-nav a").click((e)=>{
-    $(".desk-info-nav a").css({"color":"#BEBEBE"});
-    $(e.target).css({"color":"#000"});
-    if($(e.target).attr("id") == "first") {
+$(".desk-info-nav a").click((e) => {
+    $(".desk-info-nav a").css({ "color": "#BEBEBE" });
+    $(e.target).css({ "color": "#000" });
+    if ($(e.target).attr("id") == "first") {
         $(".product-description-box #specification").fadeOut()
         $(".product-description-box #description").fadeIn()
     } else if ($(e.target).attr("id") == "last") {
@@ -63,24 +63,48 @@ $(".dropdown-btn#especificacao").toggle(() => {
 
 
 
-setTimeout(()=>{
-    fetch(`/api/catalog_system/pub/products/crossselling/similars/${skuJson.productId}`)
-    .then((data)=>{
-        return data.json();
-    })
-    .then((dados)=>{
-        let colorVariation = dados.map((item)=>{
-            return `
+setTimeout(() => {
+    
+    fetch(`/api/catalog_system/pub/products/search/${skuJson.name}`)
+    .then((a) =>  a.json())
+    .then(dados => {
+        console.log(dados)
+        let currentProduct = {}
+       
+        currentProduct = dados.filter( dado => dado.productId == skuJson.productId);
+        currentProduct = currentProduct[0]
+        console.log(currentProduct)
+        let similares = currentProduct['Produtos Similares'];
+        similares = similares[0].split(",")
+        similares.unshift(`${skuJson.productId}`)
+        console.log(similares)
+       
+        similares.forEach(async function(index) {
+            let myId = index
+            myId= parseInt(myId);
+            skusonprod = [];
+            console.log("entrei")
+           await vtexjs.catalog.getProductWithVariations(myId).done(function(product){
+                console.log("montei")
+               let item = product.skus[0];
+               item.link = product.name.replace(/[\s/,]+/g, '-');
+               item.cor = product.name.split('-').pop().split('-')[0].replace(/[\s/,]+/g, '');
+                let cores =`
                 <li style="display:inline-block;margin: 15px 8px">
-                    <a href=${item.link} style="color: #000;text-decoration: none;">
-                    <img src=${item.items[0].images[0].imageUrl} style="max-width: 58px;display:block;padding: 10px 10px !important;
+                    <a href=${"/" + item.link + "/p"} style="color: #000;text-decoration: none;">
+                    <img src=${item.image} style="max-width: 65px;display:block;padding: 10px 10px !important;
                     border-radius: 100px;border: 1px solid #DDD6CC!important;"/>
-                   <span style="margin-top: 5px;">${item.Cor[0]}</span>
+                   <span style="margin-top: 10px;
+                   margin-left: 25%;
+                   display: block;">${item.cor}</span>
                     </a>
                 </li>
             `
-        });
-        console.log(colorVariation)
-        $(".seletor-color ul").append(colorVariation);
+            $(".seletor-color ul").append(cores);
+            });
+           
+           })
+
+
     })
-},200)
+}, 200)

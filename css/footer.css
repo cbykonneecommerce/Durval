@@ -218,8 +218,7 @@
         z-index: 99999;
     }
     .footer .dropbuttom .dropdown-btnf i {
-        color: white;
-        background-color: black;
+        color: black;
         padding: 8px;
         float: right;
     }
