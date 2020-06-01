@@ -155,7 +155,7 @@
     border-bottom: solid 1px #8D7573;
     color: #8D7573;
     transition: all 0.2s ease;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .deptonav {
@@ -193,20 +193,33 @@
 
 /* Style the sidenav links and the dropdown button */
 
+
+
 .sidenav a, .dropdown-btn {
-    padding: 17px 8px 17px 16px;
+    padding: 15px 8px 15px 0px;
     text-decoration: none;
     font-size: 14px;
-    color: #8B8B8B;
+    color: #8B8B8B !important;
     display: block;
-    text-transform: uppercase;
     border: none;
     background: none;
-    width: 100%;
     text-align: left;
+    line-height: 17px;
     cursor: pointer;
     outline: none;
-    border-top: solid 1px #E4E5E9;
+    text-transform: uppercase;
+    float: right;
+}
+
+.header .sing-in a {
+    background-color: white !important;
+}
+
+.sidenav span {
+    display: inline-block;
+}
+.sidenav a {
+    float: initial !important;
 }
 
 /* On mouse-over */
@@ -288,7 +301,23 @@
     height: 35px !important;
     border-radius: 0 !important;
 }
+.c-action-primary {
+    color: #8D7573 !important;
+}
+.b--muted-4 {
+    border-color: #DDD6CC !important;
+}
+.hover-bg-action-primary:focus, .hover-bg-action-primary:hover{
+    background-color: #8D7573 !important;
+    border-color: #8D7573 !important;
+}
 
+.bg-action-primary {
+    background-color: #8D7573 !important;
+}
+.b--action-primary {
+    border-color: #8D7573 !important;
+}
 @media screen and (min-width: 1200px) {
     #headerrow {
         display: flex;

@@ -4,6 +4,43 @@ $(".sku-notifyme-form p").text("Avise-me quando estiver disponível");
 
 
 
+$(document).ready(function() {
+
+    const mq = window.matchMedia("(max-width: 600px)");
+
+    if (mq.matches) {
+
+        const imgsLength = $(".product-image .apresentacao .thumbs a img").length;
+
+        for(let i= 0; i < imgsLength; i++) {
+            let imgProduct = $($(".product-image .apresentacao .thumbs a img")[i]).attr("src");
+            imgProduct = imgProduct.replace(/-55-55/g, '-500-500');
+            $($(".product-image .apresentacao .thumbs a img")[i]).attr("src",imgProduct);
+        }
+
+        
+        $(".product-image .apresentacao .thumbs").owlCarousel({
+ 
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+        
+            items : 1,
+            itemsDesktop : [1199,1],
+            itemsDesktopSmall : [979,1],
+            navigation: true,
+            stopOnHover: true,
+            pagination: false
+        
+        });
+
+        
+$(".owl-prev").html("<img src='/arquivos/seta-esquerda.png' />");
+$(".owl-next").html("<img src='/arquivos/seta-direita.png' />");
+    }
+  
+})
+
+
+
 setTimeout(function () {
     $(".desk-info-nav a#first").css({ "color": "#BEBEBE" });
     $(".product-info .shipping-box label", "body").prepend(`<img src="/arquivos/truck.png" style="margin-right: 10px" >`)
@@ -20,11 +57,37 @@ setTimeout(function () {
         if (navigator.userAgent.match(/iPhone|Android/i)) {
             $(".share-btns #wppshare").attr("href", 'https://api.whatsapp.com/send?text=' + encodeURIComponent(window.location.href));
         }
+        
     }
 
 
     $(".share-btns #fbshare").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
     $(".share-btns #pinshare").attr("href", `https://pinterest.com/pin/create/button/?url=${window.location.href}`);
+
+
+
+            //GERADOR DE FLAG DESCONTO
+            let oldprice = 0;
+            let newprice = 0;
+            let hasdiscount = false;
+            for(let i = 0; i < skuJson.skus.length; i++){
+                if(skuJson.skus[i].available && skuJson.skus[i].listPrice > 0) {
+                    oldprice = skuJson.skus[i].listPrice;
+                    newprice = skuJson.skus[i].bestPrice;
+                    hasdiscount = true;
+                    break;
+                }
+            }
+    
+            if(hasdiscount) {
+                let discount = relDiff(oldprice, newprice).toFixed();
+                $(".product-details .product-image").prepend(`<span style="position: relative;
+                z-index: 999;
+                font-size: 19px;
+                top: 28px;
+                float: right;
+                color: #8D7573;">${discount}%</span>`)
+            }
 }, 1000);
 
 

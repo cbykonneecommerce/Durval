@@ -86,19 +86,14 @@
 
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="">
-                        <img src="/arquivos/desktopbannercol1.png" alt="" />
-                    </a>
+                    <vtex:contentPlaceHolder id="topbanner1" />
+                    
                 </div>
                 <div class="col-sm-4">
-                    <a href="">
-                        <img src="/arquivos/desktopbannercol2.png" alt="" />
-                    </a>
+                    <vtex:contentPlaceHolder id="topbanner2" />
                 </div>
                 <div class="col-sm-4">
-                    <a href="">
-                        <img src="/arquivos/desktopbannercol3.png" alt="" />
-                    </a>
+                    <vtex:contentPlaceHolder id="topbanner3" />
                 </div>
             </div>
 
@@ -106,21 +101,22 @@
                 <vtex:contentPlaceHolder id="Lançamentos" />
             </div>
 
-            <div class="row hidden-xs hidden-sm">
+            <div class="row">
                 <vtex:contentPlaceHolder id="screenwidebanner1" />
                 <vtex:contentPlaceHolder id="screenwidebanner2" />
+                <vtex:contentPlaceHolder id="screenwidebanner3" />
+                <vtex:contentPlaceHolder id="screenwidebanner4" />
+                
             </div>
 
-            <div class="row  visible-xs visible-sm">
-                <vtex:contentPlaceHolder id="screenwidebannermob1" />
-                <vtex:contentPlaceHolder id="screenwidebannermob2" />
-            </div>
+            
             <div class="row">
 
-                <div class="col-sm-4 hidden-xs" style="margin-top: 80px;">
+                
+                <div class="col-xs-12 col-sm-4" style="margin-top: 80px;">
                     <h3>IMPERDÍVEL</h3>
-                    <a href=""><img src="/arquivos/imperdivel.png" alt="" /></a>
-
+                    <img src="/arquivos/banner-lateral1.jpg" alt="" class="hidden-xs"  style="margin-top: 1em;height: 322px;"/>
+                    <img src="/arquivos/banner-lateral1-mob.jpg" alt="" class="visible-xs"/>
                 </div>
                 <div class="col-sm-8">
                     <div class="showcase-default showcase-owl">
@@ -128,6 +124,12 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="showcase-default showcase-owl">
+                    <vtex:contentPlaceHolder id="outlet" />
+                </div>
+            </div>
+
 
             <div class="row">
                 <div class="col-xs-6">
@@ -137,12 +139,7 @@
                     <vtex:contentPlaceHolder id="finalbanner2" />
                 </div>
             </div>
-            <div class="row">
-                <div class="showcase-default showcase-owl">
-                    <vtex:contentPlaceHolder id="outlet" />
-                </div>
-            </div>
-
+           
 
             <div class="row" style="margin-top:65px;margin-bottom: 65px">
                 <img src="/arquivos/igpreto.png" alt="" style="max-width: 21px;

@@ -55,4 +55,8 @@
 #carouselpropostas .owl-item .item {
     text-align: center;
 }
+
+.sobre-durval iframe {
+    height: 180px
+}
 }

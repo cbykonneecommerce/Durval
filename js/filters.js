@@ -7,9 +7,23 @@ setTimeout(function(){
     
     $("#admake-advanced-filter > .box-filtro h3").toggle(function() {
         let me = $(this).text().toLowerCase();
+        switch (me) {
+            case 'Faixa de preço':
+              me = "faixa-de-preco"
+              break;
+            default:
+              console.log('nada');
+          }
         $(`#admake-advanced-filter > .box-filtro.filtro-${me} .opcoes`).slideDown();
     }, function() {
         let me = $(this).text().toLowerCase();
+        switch (me) {
+            case 'Faixa de preço':
+              me = "faixa-de-preco"
+              break;
+            default:
+              console.log('nada');
+          }
         $(`#admake-advanced-filter > .box-filtro.filtro-${me} .opcoes`).slideUp();
     })
 }, 1000)

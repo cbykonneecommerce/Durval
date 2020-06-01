@@ -294,7 +294,7 @@ input.qtd.pull-left {
         border-radius: 100px;
         border: 1px solid #DDD6CC!important;
         /* border-radius: 0; */
-        margin: 5px 5px 0 0;
+        margin: 5px 12px 0 0;
         cursor: pointer;
         -webkit-transition: 0.3s all;
         transition: 0.3s all;
@@ -614,6 +614,9 @@ label.item_unavaliable:after {
 }
 
 @media screen and (max-width: 800px) {
+    .product-image .zoomPad {
+        display: none !important;
+    }
     .product-details .product-name {
         margin-top: 1%;
     }
@@ -663,6 +666,10 @@ label.item_unavaliable:after {
 
     .product-description-box #description, .product-description-box #specification {
         display: block;
+    }
+
+    .product-info .seletor-sku .select label {
+        margin: 5px 9px 0 0;
     }
 }
 
