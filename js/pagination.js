@@ -5,21 +5,24 @@ $(document).ready(function() {
 
     //FILTRO MOBILE
 
+    const mq = window.matchMedia("(max-width: 600px)");
+    if (mq.matches) {
+        $(".resultado-busca-filtro").append(` <a  onclick="openNav()" id="open" style="color: #333;
+        border: solid 1px #E4E5E9 !important;
+        text-decoration: none;
+        padding: 9px;
+        display: inline-block;">FILTROS</a>`);
+    }
+ 
 
-    const mq = window.matchMedia("(max-width: 1000px)");
-    /*if (mq.matches) {
-        $(".navigation-tabs").hide();
-        $( "<div class='visible-xs visible-sm filtro-btn-mobile'><h4>FILTROS</h4></div>" ).insertBefore( ".navigation-tabs" );
-        $(".filtro-btn-mobile").click(()=>{
-            $( ".navigation-tabs" ).toggle( "slow" )
-        })
-    } */
     
 });
 
 $(window).on('hashchange', function(e){
+
     $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
     $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
+
    });
    $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
    $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")

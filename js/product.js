@@ -26,9 +26,9 @@ $(document).ready(function() {
             items : 1,
             itemsDesktop : [1199,1],
             itemsDesktopSmall : [979,1],
-            navigation: true,
+            navigation: false,
             stopOnHover: true,
-            pagination: false
+            pagination: true
         
         });
 
@@ -90,7 +90,7 @@ setTimeout(function () {
             }
 }, 1000);
 
-
+$(".product-description-box #description").fadeIn()
 $(".desk-info-nav a").click((e) => {
     $(".desk-info-nav a").css({ "color": "#BEBEBE" });
     $(e.target).css({ "color": "#000" });

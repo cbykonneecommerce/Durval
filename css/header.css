@@ -1,5 +1,5 @@
 * {
-    font-family: "Lato";
+    font-family: 'Montserrat', sans-serif;
 }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
@@ -21,7 +21,7 @@
 
 #top-menu {
     position: sticky;
-    top: 13%;
+    top: 14%;
     z-index: 10000000;
 }
 
@@ -64,7 +64,7 @@
     border-top-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
-    /*border-bottom: 1px solid #949494 !important;*/
+    border-bottom: 1px solid transparent !important;
     background-size: contain;
     border-radius: 0px !important;
     margin-left: -2.5%;
@@ -110,6 +110,9 @@
     margin-bottom: 0px !important
 }
 
+.header .sing-in {
+    margin-top: 6px;
+}
 
 .header .button-menu-xs .btn {
     outline: none;
@@ -171,6 +174,13 @@
 #deptos-list a {
     color: black !important;
     font-size: 13px;
+}
+#deptos-list a:hover {
+    border-bottom: solid 1px #8D7573;
+    color: #8D7573 !important;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 #deptos-list ul li {

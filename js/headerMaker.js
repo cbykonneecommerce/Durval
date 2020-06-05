@@ -5,6 +5,7 @@ function relDiff(a, b) {
     return a-b === 0 ? 0 : 100 * Math.abs( ( a - b ) / b  ) || 'input error';
    }
 
+   
 
    function generateSimilar() {
     $(".box-item").each( async function(index) {
@@ -89,9 +90,20 @@ function relDiff(a, b) {
 
 $( document ).ready(function() {
     $("#usuario-login").mouseenter(()=>{$("#drop-login").show()});
-    $("#usuario-login").mouseleave(()=>{$("#drop-login").hide()})
+    $("#usuario-login").mouseleave(()=>{
+        $("#drop-login").mouseleave(()=>{
+            $("#drop-login").hide()
+        })
+        
+    })
     $("#fone").mouseenter(()=>{$("#drop-fone").show()});
-    $("#fone").mouseleave(()=>{$("#drop-fone").hide()})
+    $("#fone").mouseleave(()=>{
+
+        $("#drop-fone").mouseleave(()=>{
+            $("#drop-fone").hide()
+        })
+     
+    })
 
     fetch("/api/catalog_system/pub/category/tree/3/")
     .then(res =>  res.json())
@@ -185,6 +197,9 @@ $( document ).ready(function() {
     })
 
 
+
+
+
     const mq = window.matchMedia("(max-width: 600px)");
     if (mq.matches) {
        /* $(window).scroll(function(){
@@ -204,9 +219,12 @@ $( document ).ready(function() {
           $(window).scroll(function () {
               var scroll = $(window).scrollTop();
       
-              if (scroll > position) {
+              if (scroll >= position) {
+                setTimeout(()=>{ 
+                    $('#headerrow fieldset').hide();
+                  },1000)
       
-                   $('#headerrow fieldset').hide();
+                  
       
               } else {
                   setTimeout(()=>{
@@ -221,6 +239,7 @@ $( document ).ready(function() {
     }else {
         $(`.header .search .btn-buscar`).mouseenter(function() {
             $(".header .search .btn-buscar").attr("style","border-bottom: 1px solid #949494 !important")
+            $(".header .search .fulltext-search-box").attr("style","border-bottom: 1px solid #949494 !important")
             $(".header .search .fulltext-search-box").show()
             $(".header .search .fulltext-search-box").animate({
                 width: "83%"
@@ -230,18 +249,24 @@ $( document ).ready(function() {
               })
        });
 
+    
+
        $(`.header .search .busca`).mouseleave(function() {
-        $(".header .search .fulltext-search-box").animate({
-            width: "1%"
-          }, {
-            queue: false,
-            duration: 800
-          })
-          setTimeout(()=>{
-            $(".header .search .fulltext-search-box").hide()
-          }, 800)
+
+        
+            $(".header .search .fulltext-search-box").animate({
+                width: "1%"
+              }, {
+                queue: false,
+                duration: 800
+              })
+              setTimeout(()=>{
+                $(".header .search .fulltext-search-box").attr("style","border-bottom:transparent !important")
+              }, 800)
+        
+       
          
-        $(".header .search .btn-buscar").attr("style","border-bottom:none !important")
+        $(".header .search .btn-buscar").attr("style","border-bottom:transparent !important")
        
        
     });

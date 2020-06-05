@@ -8,7 +8,7 @@ setTimeout(function(){
     $("#admake-advanced-filter > .box-filtro h3").toggle(function() {
         let me = $(this).text().toLowerCase();
         switch (me) {
-            case 'Faixa de preço':
+            case 'faixa de preço':
               me = "faixa-de-preco"
               break;
             default:
@@ -18,7 +18,7 @@ setTimeout(function(){
     }, function() {
         let me = $(this).text().toLowerCase();
         switch (me) {
-            case 'Faixa de preço':
+            case 'faixa de preço':
               me = "faixa-de-preco"
               break;
             default:

@@ -84,7 +84,7 @@
  }
  
  /** ************************************************************************************ **/
- /** *********** CABEÃ‡ALHO **/
+ /** *********** CABEÃƒâ€¡ALHO **/
  /** ************************************************************************************ **/
  .header-container{
    
@@ -101,11 +101,11 @@
      .welcome-bar p,
      .welcome-bar a,
      .welcome-bar span{
-         color: #777777;
-         font-size: 13px;
-         font-weight: 400;
-         line-height: 20px;
-         margin: 0;
+      color: #8b8b8b;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      margin: 0;
      }
      .welcome-bar a:hover{
          color: #333;
@@ -328,7 +328,7 @@
            background-color: #e7e7e7;
        }
  
-   /** VERSÃƒO MOBILE **/
+   /** VERSÃƒÆ’O MOBILE **/
    #menu-mobile ul{
      display: block;
    }
@@ -452,7 +452,7 @@
  }
    .owl-controls .owl-pagination{
      height: 0;
-     position: absolute;
+     /*position: absolute;*/
      bottom: 50px;
      text-align: center;
      width: 100%;
@@ -475,7 +475,7 @@
      }
      .owl-controls .owl-pagination .owl-page.active,
      .owl-controls .owl-pagination .owl-page.active:hover{
-       background-color: #fff;
+       background-color: #8D7573;
      }
    .owl-controls .owl-buttons{
      height: 0;

@@ -25,6 +25,7 @@
 .sobre-durval p {
     font-size: 15px;
     line-height: 25px;
+    font-weight: 500;
 }
 
 .politicas-comerciais ul li img{
@@ -32,7 +33,17 @@
 }
 
 
+.box-banner a img {
+  
+    max-width: 100%;
+    height: auto;
 
+}
+
+
+.owl-controls .owl-pagination {
+    position: absolute !important;
+}
 
 
 @media screen and (max-width: 800px) {
@@ -59,4 +70,15 @@
 .sobre-durval iframe {
     height: 180px
 }
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+.square-banner {
+    display: inline-block;
+    width: 50%;
+}
+
 }
