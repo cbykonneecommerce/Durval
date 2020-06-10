@@ -5,10 +5,13 @@ $(".sku-notifyme-form p").text("Avise-me quando estiver disponível");
 
 
 $(document).ready(function() {
+    $(".product-details .seletor-sku .specification").text("ESCOLHA O TAMANHO")
 
     const mq = window.matchMedia("(max-width: 600px)");
 
     if (mq.matches) {
+
+       
 
         const imgsLength = $(".product-image .apresentacao .thumbs a img").length;
 
@@ -31,6 +34,12 @@ $(document).ready(function() {
             pagination: true
         
         });
+
+
+        $(".product-info .shipping-box label").click(()=>{
+            $(".product-info .shipping-box label .fitext").css({"display": "block"});
+            $(".product-info .shipping-box .freight-btn").css({"display": "inline-block"});
+        })
 
         
 $(".owl-prev").html("<img src='/arquivos/seta-esquerda.png' />");

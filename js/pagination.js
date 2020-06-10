@@ -12,6 +12,17 @@ $(document).ready(function() {
         text-decoration: none;
         padding: 9px;
         display: inline-block;">FILTROS</a>`);
+
+
+        
+  let qtd = $(".resultado-busca-numero");
+  $(".resultado-busca-numero").remove();
+  $(".resultado-busca-filtro").append(qtd[0]);
+  $(".resultado-busca-numero").attr("style","margin:10px 21px 0px 68px")
+  
+  $(".resultado-busca-filtro").append(qtd[0]);
+  $(".resultado-busca-numero").attr("style","margin:10px 21px 0px 68px")
+
     }
  
 

@@ -23,57 +23,85 @@ function relDiff(a, b) {
             currentProduct = currentProduct[0]
             console.log(currentProduct)
             let similares = currentProduct['Produtos Similares'];
-            similares = similares[0].split(",")
+            similares = similares[0].split(",");
             
-            console.log(similares)
+            if(similares){
+                console.log(similares)
            
-            similares.forEach((index)=> {
-                let myId = index
-                myId= parseInt(myId);
-                skusonprod = [];
-                console.log("entrei")
-               vtexjs.catalog.getProductWithVariations(myId).done(function(product){
-                    console.log("montei")
-                   let item = product.skus[0];
-                   item.link = product.name.replace(/[\s/,]+/g, '-');
-                   item.cor = product.name.split('-').pop().split('-')[0].replace(/[\s/,]+/g, '');
-                    let cores =`
-                    <li style="display:inline-block;margin: 15px 8px">
-                        <a href=${"/" + item.link + "/p"} style="color: #000;text-decoration: none;">
-                        <img src=${item.image} />
-                        </a>
-                    </li>
-                `
-                $(".sku-list.list-inline",me).append(cores);
-
-
-
-                //GERADOR DE FLAG DESCONTO
-                let oldprice = 0;
-        let newprice = 0;
-        let hasdiscount = false;
-        for(let i = 0; i < product.skus.length; i++){
-            if(product.skus[i].available && product.skus[i].listPrice > 0) {
-                oldprice = product.skus[i].listPrice;
-                newprice = product.skus[i].bestPrice;
-                hasdiscount = true;
-                break;
+                similares.forEach((index)=> {
+                    let myId = index
+                    myId= parseInt(myId);
+                    skusonprod = [];
+                    console.log("entrei")
+                   vtexjs.catalog.getProductWithVariations(myId).done(function(product){
+                        console.log("montei")
+                       let item = product.skus[0];
+                       item.link = product.name.replace(/[\s/,]+/g, '-');
+                       item.cor = product.name.split('-').pop().split('-')[0].replace(/[\s/,]+/g, '');
+                        let cores =`
+                        <li style="display:inline-block;margin: 15px 8px">
+                            <a href=${"/" + item.link + "/p"} style="color: #000;text-decoration: none;">
+                            <img src=${item.image} />
+                            </a>
+                        </li>
+                    `
+                    $(".sku-list.list-inline",me).append(cores);
+    
+    
+    
+                    //GERADOR DE FLAG DESCONTO
+                    let oldprice = 0;
+            let newprice = 0;
+            let hasdiscount = false;
+            for(let i = 0; i < product.skus.length; i++){
+                if(product.skus[i].available && product.skus[i].listPrice > 0) {
+                    oldprice = product.skus[i].listPrice;
+                    newprice = product.skus[i].bestPrice;
+                    hasdiscount = true;
+                    break;
+                }
             }
-        }
+    
+            if(hasdiscount) {
+                let discount = relDiff(oldprice, newprice).toFixed();
+                $(me).prepend(`<span style="position: relative;
+                z-index: 9;
+                font-size: 19px;
+                top: 34px;
+                float: right;
+                color: #8D7573;">${discount}%</span>`)
+            }
+    
+                    });
+                   
+                   })
+            } else {
 
-        if(hasdiscount) {
-            let discount = relDiff(oldprice, newprice).toFixed();
-            $(me).prepend(`<span style="position: relative;
-            z-index: 9;
-            font-size: 19px;
-            top: 34px;
-            float: right;
-            color: #8D7573;">${discount}%</span>`)
-        }
+                     //GERADOR DE FLAG DESCONTO
+                     let oldprice = 0;
+                     let newprice = 0;
+                     let hasdiscount = false;
+                     for(let i = 0; i < product.skus.length; i++){
+                         if(product.skus[i].available && product.skus[i].listPrice > 0) {
+                             oldprice = product.skus[i].listPrice;
+                             newprice = product.skus[i].bestPrice;
+                             hasdiscount = true;
+                             break;
+                         }
+                     }
+             
+                     if(hasdiscount) {
+                         let discount = relDiff(oldprice, newprice).toFixed();
+                         $(me).prepend(`<span style="position: relative;
+                         z-index: 9;
+                         font-size: 19px;
+                         top: 34px;
+                         float: right;
+                         color: #8D7573;">${discount}%</span>`)
+                     }
 
-                });
-               
-               })
+            }
+            
      
      
         })
@@ -115,7 +143,7 @@ $( document ).ready(function() {
         response.forEach(element => {
             let divtext =  element.name;
             element.name = element.name.replace(/[\s/,&]+/g, '-');
-            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}?PS=24">${divtext}</a></li>`);
+            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}">${divtext}</a></li>`);
             console.log("adding main")
             if(element.hasChildren) {
             $("#top-menu .container #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
@@ -173,11 +201,11 @@ $( document ).ready(function() {
             element.children.forEach((subs, index) => {
                 console.log("adding children")
                 if( index < 4) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
                 } else if (index < 8) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
                 } else {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}?PS=24">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
                 }
 
                 $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}">${subs.name}</a>`)
@@ -199,7 +227,7 @@ $( document ).ready(function() {
 
 
 
-
+    let toggle = true;
     const mq = window.matchMedia("(max-width: 600px)");
     if (mq.matches) {
        /* $(window).scroll(function(){
@@ -214,7 +242,7 @@ $( document ).ready(function() {
             }
           });*/
 
-          var position = $(window).scrollTop();
+        /*  var position = $(window).scrollTop();
 
           $(window).scroll(function () {
               var scroll = $(window).scrollTop();
@@ -235,7 +263,22 @@ $( document ).ready(function() {
               }
       
               position = scroll;
-          });
+          });*/
+
+          $("#lupa-mobile").click(function(e){
+              e.preventDefault();
+            if(toggle) {
+                $(".header .search .busca").show();
+                $("#lupa-mobile img").attr("src","/arquivos/menu-close.png");
+                toggle = false
+            } else {
+                toggle = true;
+                $(".header .search .busca").hide();
+                $("#lupa-mobile img").attr("src","/arquivos/lupa.png");
+
+            }
+      
+          })
     }else {
         $(`.header .search .btn-buscar`).mouseenter(function() {
             $(".header .search .btn-buscar").attr("style","border-bottom: 1px solid #949494 !important")

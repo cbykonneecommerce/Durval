@@ -24,7 +24,8 @@
 
 .depto-text p {
     font-size: 15px;
-    line-height: 16px;
+    line-height: 14px;
+    margin: 0px;
 
 }
 .depto-text a {
@@ -33,10 +34,12 @@
 
 }
 
+.depto-text h1 {
+    text-transform: uppercase;
+}
 .depto-text h2 {
     font-size: 15px !important;
     color: #a4a597;
-
 }
 
 .pages li.pgEmpty {
@@ -78,7 +81,7 @@
 }
 
 #admake-advanced-filter > .box-filtro h3 {
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     line-height: 10px;
 }
@@ -94,6 +97,58 @@
     padding-bottom: 8px;
 }
 
+
+
+
+.resultado-busca-termo, .resultado-busca-tempo {
+    display: none !important;
+}
+
+.sub .resultado-busca-filtro .resultado-busca-numero {
+    display: inline-block;
+    margin: 10px 21px 0px 20px;
+}
+span {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.resultado-busca-numero span {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    padding: 0;
+    text-transform: uppercase;
+    color: #333 !important
+}
+.sub {
+    display: inline-block;
+    border-bottom: solid 1px #E4E5E9;
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+.filter-pill {
+    background-color: #8D7573 !important;
+    font-weight: 400 !important;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 0px !important;
+}
+
+.filter-pill-remover{
+   float: right;
+}
+
+.filter-pill-remover::after{
+    color: #fff;
+    content: "\f00d";
+    font-size: 16px;
+    font-family: FontAwesome;
+    line-height: 14px;
+}
+
 @media screen and (max-width: 1900px) {
     .box-banner a img {
         height: 100%;
@@ -103,6 +158,17 @@
 @media screen and (max-width: 800px) {
     .resultado-busca-filtro > fieldset.filterby {
         display: none;
+        width: 72%;
+    }
+    .resultado-busca-filtro > fieldset select {
+        width: 100%;
+    }
+    .resultado-busca-filtro {
+        text-align: center;
+    }
+
+    #open {
+        width: 50%;
     }
 
     .prateleira.vitrine > ul > li {
@@ -139,8 +205,8 @@
     .sub {
         background-color: white;
         position: sticky;
-        top: 123px;
-        z-index: 10000000;
+        top: 97px;
+        z-index: 10;
     }
 
     .resultado-busca-filtro > fieldset {
@@ -150,6 +216,21 @@
     .resultado-busca-filtro > fieldset.filterBy {
         display: none;
     }
+
+
+    #admake-advanced-filter > .box-filtro h3 {
+        font-weight: 600;
+    }
+
+
+    #departament-navegador {
+        border-bottom: none;
+    }
+
+    #admake-advanced-filter .opcoes {
+        padding-top: 12px;
+    }
+
 }
 @media screen and (min-width: 1100px) {
     #sidenavCTR {
@@ -164,16 +245,15 @@
     #admake-advanced-filter > .box-filtro {
         display: inline-grid;
         background-color: white;
-        min-width: 209px;
-        padding: 0px 20px !important;
+        padding: 0px 5px !important;
         border-bottom: none !important;
 
     }
 
     #admake-advanced-filter > .box-filtro .sub-titulo {
-        padding: 15px 20px;
+        padding: 13px 1px 13px 7px;
     border: solid 1px #E4E5E9;
-    width: 200px !important
+    width: 164px !important
     }
 
     #admake-advanced-filter .opcoes {
@@ -181,12 +261,21 @@
     overflow: hidden;
     position: absolute;
     background-color: white;
-    top: 40px;
+    top: 36px;
     z-index: 9;
     border: solid 1px #E4E5E9;
     padding: 15px 20px;
-    width: 200px !important;
+    width: 164px !important;
     border-top: none;
-    margin-left: 20px;
+    margin-left: 5px;
     }
+
+    #admake-advanced-filter .box-filtro.checkbox li a {
+        font-size: 11px;
+    }
+
+    #admake-advanced-filter::before{
+        content:"Filtrar por:"
+    }
+
 }
