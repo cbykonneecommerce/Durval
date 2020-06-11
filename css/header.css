@@ -25,6 +25,10 @@
     z-index: 10000000;
 }
 
+#minimized {
+    display: none;
+}
+
 .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -37,6 +41,7 @@
 
 .link-logo img {
     max-width: 175px;
+    transition: 0.2s;
 }
 
 .fulltext-search-box {
@@ -166,9 +171,14 @@
     /*opacity: 0.92;*/
     z-index: 9999999999;
     padding-top: 2em;
-    padding-left: 12em;
+    padding-left: 2em;
     position: absolute;
-    width: 100%;
+   /* width: 100%;*/
+
+
+
+    width: 71%;
+    left: 16%;
 }
 
 #deptos-list a {
@@ -372,3 +382,15 @@
         display: none;
     }
 }
+
+
+
+@media screen and (max-height: 786px) {
+
+    #top-menu {
+        top: 16%;
+    }
+
+    
+}
+

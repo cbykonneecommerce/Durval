@@ -3,7 +3,7 @@
 }
 
 .notifymetitle.notifyme-title {
-    color: #C52828;
+    color: #8B0000;
     font-size: 25px;
     line-height: 36px;
 }
@@ -27,6 +27,7 @@
     background-color: black;
     padding: 8px 16px;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -280,8 +281,12 @@ input.qtd.pull-left {
     font-weight: 300 !important;
     color: black !important;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 14px;
+}
+
+.specification-color {
+    display: none;
 }
 
 .product-info .seletor-sku .select label {
@@ -545,11 +550,12 @@ label.combination_unavaliable:after {
 label.item_unavaliable:after {
     color: #fff;
     background-color: #8B0000;
-    padding: 2px 6px;
+    padding: 0px 5px;
     content: "X";
     border-radius: 100px;
     position: absolute;
     margin-top: -17px;
+    font-size: 9px;
 }
 
 .desk-info-nav a {
@@ -567,7 +573,7 @@ label.item_unavaliable:after {
 
 .modal {
     background-color: transparent !important;
-    z-index: 9999 !important;
+    z-index: 99999 !important;
     top: 16% !important;
     border: none !important;
     box-shadow: none !important;

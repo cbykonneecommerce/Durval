@@ -97,8 +97,17 @@
     padding-bottom: 8px;
 }
 
+.depto-text {
+    margin-bottom: 3em;
+}
 
-
+#vermaisbtn {
+    color: #8D7573;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 7px;
+    margin-bottom: 2em;
+}
 
 .resultado-busca-termo, .resultado-busca-tempo {
     display: none !important;
@@ -113,7 +122,7 @@ span {
 }
 
 .resultado-busca-numero span {
-    font-size: 13px !important;
+    font-size: 12px !important;
     font-weight: 400 !important;
     padding: 0;
     text-transform: uppercase;
@@ -168,7 +177,11 @@ span {
     }
 
     #open {
-        width: 50%;
+        width: 40%;
+    }
+    .resultado-busca-filtro > fieldset select {
+      
+        font-size: 11px !important;
     }
 
     .prateleira.vitrine > ul > li {
@@ -248,6 +261,12 @@ span {
         padding: 0px 5px !important;
         border-bottom: none !important;
 
+    }
+
+    #admake-advanced-filter .opcoes .ver-filtros {
+      
+        right: 6px !important;
+        top: 17px !important;
     }
 
     #admake-advanced-filter > .box-filtro .sub-titulo {

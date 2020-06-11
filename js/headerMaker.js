@@ -5,6 +5,49 @@ function relDiff(a, b) {
     return a-b === 0 ? 0 : 100 * Math.abs( ( a - b ) / b  ) || 'input error';
    }
 
+
+   function generateDiscountFlag(){
+
+       $(".box-item").each(function(){
+        let me = $(this);
+        let myId = $(".product-name a span",this).text();
+        vtexjs.catalog.getProductWithVariations(myId).done(function(product){
+            console.log("montei")
+
+
+
+        //GERADOR DE FLAG DESCONTO
+        let oldprice = 0;
+let newprice = 0;
+let hasdiscount = false;
+for(let i = 0; i < product.skus.length; i++){
+    if(product.skus[i].available && product.skus[i].listPrice > 0) {
+        oldprice = product.skus[i].listPrice;
+        newprice = product.skus[i].bestPrice;
+        hasdiscount = true;
+        break;
+    }
+}
+
+if(hasdiscount) {
+    let discount = relDiff(newprice, oldprice).toFixed();
+    $(me).prepend(`<span style="position: relative;
+    z-index: 8;
+    font-size: 10px;
+    top: 18px;
+    float: right;
+    color: #fff;
+    background-color: #8D7573;
+    border-radius: 100px;
+    padding: 8px;
+    padding-top: 10px;
+    margin-bottom: -8px;">${discount}%<br/>OFF</span>`)
+}
+
+        });
+       })
+
+   }
    
 
    function generateSimilar() {
@@ -23,9 +66,10 @@ function relDiff(a, b) {
             currentProduct = currentProduct[0]
             console.log(currentProduct)
             let similares = currentProduct['Produtos Similares'];
-            similares = similares[0].split(",");
+            
             
             if(similares){
+                similares = similares[0].split(",");
                 console.log(similares)
            
                 similares.forEach((index)=> {
@@ -47,65 +91,18 @@ function relDiff(a, b) {
                     `
                     $(".sku-list.list-inline",me).append(cores);
     
-    
-    
-                    //GERADOR DE FLAG DESCONTO
-                    let oldprice = 0;
-            let newprice = 0;
-            let hasdiscount = false;
-            for(let i = 0; i < product.skus.length; i++){
-                if(product.skus[i].available && product.skus[i].listPrice > 0) {
-                    oldprice = product.skus[i].listPrice;
-                    newprice = product.skus[i].bestPrice;
-                    hasdiscount = true;
-                    break;
-                }
-            }
-    
-            if(hasdiscount) {
-                let discount = relDiff(oldprice, newprice).toFixed();
-                $(me).prepend(`<span style="position: relative;
-                z-index: 9;
-                font-size: 19px;
-                top: 34px;
-                float: right;
-                color: #8D7573;">${discount}%</span>`)
-            }
+           
     
                     });
                    
                    })
-            } else {
-
-                     //GERADOR DE FLAG DESCONTO
-                     let oldprice = 0;
-                     let newprice = 0;
-                     let hasdiscount = false;
-                     for(let i = 0; i < product.skus.length; i++){
-                         if(product.skus[i].available && product.skus[i].listPrice > 0) {
-                             oldprice = product.skus[i].listPrice;
-                             newprice = product.skus[i].bestPrice;
-                             hasdiscount = true;
-                             break;
-                         }
-                     }
-             
-                     if(hasdiscount) {
-                         let discount = relDiff(oldprice, newprice).toFixed();
-                         $(me).prepend(`<span style="position: relative;
-                         z-index: 9;
-                         font-size: 19px;
-                         top: 34px;
-                         float: right;
-                         color: #8D7573;">${discount}%</span>`)
-                     }
-
             }
             
      
      
         })
        })
+
    }
 
 
@@ -316,12 +313,47 @@ $( document ).ready(function() {
        
     }
 
+    function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+          $(".link-logo img").css({"max-width": "110px"}); 
+          $(".search").removeClass("col-lg-offset-6"); 
+          $("#minimized").show();
+          $("#original").hide();
+          const height = window.matchMedia("(max-height: 786px)");
+          if (height.matches) {
+            $("#top-menu").css({"top": "12%"})
+          } else {
+            $("#top-menu").css({"top": "8%"})
+          }
 
-   
-   
+          
+        
+        } else {
+          $(".link-logo img").css({"max-width": "175px"});
+          $(".search").addClass("col-lg-offset-6"); 
+          $("#minimized").hide();
+          $("#original").show();
+
+          const height = window.matchMedia("(max-height: 786px)");
+          if (height.matches) {
+            $("#top-menu").css({"top": "16%"})
+          } else {
+            $("#top-menu").css({"top": "14%"})
+          }
+          
+        }
+      }
+    
+    const largura = window.matchMedia("(min-width: 1200px)");
+        if (largura.matches) {
+            window.onscroll = function() {scrollFunction()};
+        }
+        
+
+
 
     
-
+    generateDiscountFlag();
     generateSimilar();
 
 

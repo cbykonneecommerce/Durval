@@ -7,11 +7,12 @@ $(document).ready(function() {
 
     const mq = window.matchMedia("(max-width: 600px)");
     if (mq.matches) {
-        $(".resultado-busca-filtro").append(` <a  onclick="openNav()" id="open" style="color: #333;
+        $(".resultado-busca-filtro").prepend(` <a  onclick="openNav()" id="open" style="color: #333;
         border: solid 1px #E4E5E9 !important;
         text-decoration: none;
-        padding: 9px;
-        display: inline-block;">FILTROS</a>`);
+        padding: 10px;
+        display: inline-block;
+        font-size: 12px;">FILTROS</a>`);
 
 
         
@@ -53,9 +54,15 @@ $(window).on('hashchange', function(e){
  
  
 $(window).on('hashchange', function(e){
+    generateDiscountFlag();
     generateSimilar();
    });
 
+
+   $("#vermaisbtn").click(()=>{
+       $(".hidden-content").show();
+       $("#vermaisbtn").hide();
+   })
 
 
 

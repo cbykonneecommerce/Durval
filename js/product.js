@@ -51,6 +51,10 @@ $(".owl-next").html("<img src='/arquivos/seta-direita.png' />");
 
 
 setTimeout(function () {
+    $(".product-info .shipping-box label").click(()=>{
+        $(".product-info .shipping-box label .fitext").css({"display": "block"});
+        $(".product-info .shipping-box .freight-btn").css({"display": "inline-block"});
+    })
     $(".desk-info-nav a#first").css({ "color": "#BEBEBE" });
     $(".product-info .shipping-box label", "body").prepend(`<img src="/arquivos/truck.png" style="margin-right: 10px" >`)
     $(".glis-popup-link.glis-thickbox.tb-added.qvBinded", "body").html(`<img src="/arquivos/CORACAO.png" style="max-width: 18px"> ADICIONAR A LISTA DE DESEJOS`);
@@ -89,13 +93,18 @@ setTimeout(function () {
             }
     
             if(hasdiscount) {
-                let discount = relDiff(oldprice, newprice).toFixed();
-                $(".product-details .product-image").prepend(`<span style="position: relative;
-                z-index: 999;
-                font-size: 19px;
-                top: 28px;
+                let discount = relDiff(newprice, oldprice).toFixed();
+                $(".product-details .product-image").prepend(`<span id="discount-badge" style="position: relative;
+                z-index: 99999;
+                font-size: 16px;
+                top: 18px;
                 float: right;
-                color: #8D7573;">${discount}%</span>`)
+                color: #fff;
+                background-color: #8D7573;
+                border-radius: 100px;
+                padding: 8px;
+                padding-top: 10px;
+                margin-bottom: -8px;">${discount}%<br/>OFF</span>`)
             }
 }, 1000);
 
@@ -179,4 +188,9 @@ setTimeout(() => {
 
 
     })
+
+
+    if($(".specification-color ul").html() != undefined){
+        $(".specification-color").show()
+}
 }, 200)

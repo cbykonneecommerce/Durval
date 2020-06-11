@@ -35,21 +35,27 @@ setTimeout(function(){
 
 const mq = window.matchMedia("(max-width: 600px)");
 if (mq.matches) {
-  $(".resultado-busca-filtro").append($(".searchResultsTime").html());
-  $("#admake-advanced-filter .opcoes").show();
 
-  if($(" #admake-advanced-filter  .filtro-ativo").length && !($(" #admake-advanced-filter  span").length) ) {
-    $(".active-filters").prepend(`<span>FILTROS SELECIONADOS:</span>`)
-  }
-  for(let i = 0; i <  $(" #admake-advanced-filter  .filtro-ativo").length; i++) {
-    let texto =  $($(" #admake-advanced-filter  .filtro-ativo")[i]).text();
-    
-    let link = $($(" #admake-advanced-filter  .filtro-ativo")[i]).next().attr("href");
-    console.log(link)
-      $(".active-filters").append(`<div class="filter-pill">${texto} <a class="filter-pill-remover" href=${link}></a> </div>`)
-  }
-
+  setTimeout(()=>{
+    $(".resultado-busca-filtro").append($(".searchResultsTime").html());
+    $(".resultado-busca-numero:first").hide()
+    $("#admake-advanced-filter .opcoes").show();
+  
+    if($(" #admake-advanced-filter  .filtro-ativo").length && !($(" #admake-advanced-filter  span").length) ) {
+      $(".active-filters").prepend(`<span>FILTROS SELECIONADOS:</span>`)
+    }
+    for(let i = 0; i <  $(" #admake-advanced-filter  .filtro-ativo").length; i++) {
+      let texto =  $($(" #admake-advanced-filter  .filtro-ativo")[i]).text();
+      
+      let link = $($(" #admake-advanced-filter  .filtro-ativo")[i]).next().attr("href");
+      console.log(link)
+        $(".active-filters").append(`<div class="filter-pill">${texto} <a class="filter-pill-remover" href=${link}></a> </div>`)
+    }
+  
+  },1000)
+  
   $(window).on('hashchange', function(e){
+    $(".active-filters").html("")
     if($(" #admake-advanced-filter  .filtro-ativo").length && !($(" #admake-advanced-filter  span").length) ) {
       $(".active-filters").prepend(`<span>FILTROS SELECIONADOS:</span>`)
     }
