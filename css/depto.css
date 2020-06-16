@@ -57,6 +57,7 @@
     border: solid 1px #E4E5E9 !important;
     border-radius: 0 !important;
     color: black !important;
+   
 }
 
 .resultado-busca-filtro > .orderBy label {
@@ -171,6 +172,10 @@ span {
     }
     .resultado-busca-filtro > fieldset select {
         width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 1px 10px
     }
     .resultado-busca-filtro {
         text-align: center;
@@ -242,6 +247,11 @@ span {
 
     #admake-advanced-filter .opcoes {
         padding-top: 12px;
+    }
+
+
+    .prateleira.vitrine > ul > li {
+        padding: 6px 15px !important;
     }
 
 }

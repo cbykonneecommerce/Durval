@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     if (mq.matches) {
 
-       
+        let aa =   $(".product-image .apresentacao .thumbs").contents()
 
         const imgsLength = $(".product-image .apresentacao .thumbs a img").length;
 
@@ -34,6 +34,12 @@ $(document).ready(function() {
             pagination: true
         
         });
+
+
+        $(".product-info .seletor-sku .select label").click(()=>{
+            setTimeout(()=>{$(".product-image .apresentacao .thumbs").html(aa)},800)
+            
+        })
 
 
         $(".product-info .shipping-box label").click(()=>{

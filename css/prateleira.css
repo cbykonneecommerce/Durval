@@ -122,13 +122,13 @@ select, fieldset {
 
 
 @media (max-width: 600px)  {
-    
+   
     fieldset {
         
         margin-top: 1em;
     }
     .prateleira .box-item {
-        height: 23em;
+        height: 24em;
     }
 
     .product-name .sku-list {
