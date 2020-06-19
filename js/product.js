@@ -24,7 +24,6 @@ $(document).ready(function() {
         
         $(".product-image .apresentacao .thumbs").owlCarousel({
  
-            autoPlay: 3000, //Set AutoPlay to 3 seconds
         
             items : 1,
             itemsDesktop : [1199,1],
@@ -38,6 +37,28 @@ $(document).ready(function() {
 
         $(".product-info .seletor-sku .select label").click(()=>{
             setTimeout(()=>{$(".product-image .apresentacao .thumbs").html(aa)},800)
+
+          
+                setTimeout(()=>{
+                      let aab = $(".product-image .apresentacao .thumbs").html();
+                      
+                      $("#show").html(aab);
+                      $(".product-image .apresentacao #show").owlCarousel({
+       
+                     
+                      
+                          items : 1,
+                          itemsDesktop : [1199,1],
+                          itemsDesktopSmall : [979,1],
+                          navigation: false,
+                          stopOnHover: true,
+                          pagination: true
+                      
+                      });
+      
+                  },1000)
+                  
+              
             
         })
 

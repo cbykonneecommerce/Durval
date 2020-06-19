@@ -636,6 +636,9 @@ label.item_unavaliable:after {
     .product-image .apresentacao {
         margin-left: 15%
     }
+    .share-btns {
+        margin-top:36em !important
+    }
 }
 
 @media screen and (max-width: 800px) {

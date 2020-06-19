@@ -179,14 +179,16 @@ span {
     }
     .resultado-busca-filtro {
         text-align: center;
+        margin-top: 0em;
     }
 
     #open {
         width: 40%;
+        font-size: 10px !important;
     }
     .resultado-busca-filtro > fieldset select {
       
-        font-size: 11px !important;
+        font-size: 10px !important;
     }
 
     .prateleira.vitrine > ul > li {
@@ -223,7 +225,7 @@ span {
     .sub {
         background-color: white;
         position: sticky;
-        top: 97px;
+        top: 96px;
         z-index: 10;
     }
 
@@ -252,6 +254,10 @@ span {
 
     .prateleira.vitrine > ul > li {
         padding: 6px 15px !important;
+    }
+
+    .resultado-busca-numero span {
+        font-size: 10px !important;
     }
 
 }

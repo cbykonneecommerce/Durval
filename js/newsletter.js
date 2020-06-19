@@ -1,7 +1,7 @@
 
 
 
-$("#emailcatcher").click(()=>{
+$("#emailcatcher").click((event)=>{
     event.preventDefault(); 
     //console.log($("#cl_email").val())
     let dados = {

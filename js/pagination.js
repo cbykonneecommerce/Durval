@@ -54,8 +54,11 @@ $(window).on('hashchange', function(e){
  
  
 $(window).on('hashchange', function(e){
-    generateDiscountFlag();
-    generateSimilar();
+    setTimeout(()=>{
+        generateDiscountFlag();
+        generateSimilar();
+    },1000)
+  
    });
 
 

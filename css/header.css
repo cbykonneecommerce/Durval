@@ -168,15 +168,11 @@
 
 .deptonav {
     background-color: #fff;
-    /*opacity: 0.92;*/
     z-index: 9999999999;
     padding-top: 2em;
     padding-left: 2em;
     position: absolute;
-   /* width: 100%;*/
-
-
-
+    padding-bottom: 30px;
     width: 71%;
     left: 16%;
 }
