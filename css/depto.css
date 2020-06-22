@@ -159,6 +159,10 @@ span {
     line-height: 14px;
 }
 
+.resultado-busca-numero {
+    display: none !important
+}
+
 @media screen and (max-width: 1900px) {
     .box-banner a img {
         height: 100%;
@@ -166,6 +170,11 @@ span {
 }
 
 @media screen and (max-width: 800px) {
+
+
+    .resultado-busca-numero {
+        display: none !important
+    }
     .resultado-busca-filtro > fieldset.filterby {
         display: none;
         width: 72%;

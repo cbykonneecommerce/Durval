@@ -482,7 +482,7 @@ label.combination_unavaliable:after {
     border-top: none !important;
 }
 
-.glis-popup-link.glis-thickbox.tb-added.qvBinded, .glis-create-form-submit {
+.glis-popup-link.glis-thickbox.tb-added.qvBinded, .glis-create-form-submit, .giftlist-insertsku-must-login .glis-link {
     color: #8D7573 !important;
     text-decoration: none !important;
     font-size: 12px;
