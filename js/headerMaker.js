@@ -153,10 +153,8 @@ $( document ).ready(function() {
 
                      </ul>
                  </div>
-                 <div class="col-sm-3">
-                    <ul></ul>
-                 </div>
-                 <div class="col-sm-3">
+                
+                 <div class="col-sm-6">
                  <a><img src="/arquivos/menu_${element.name}.jpg" style="margin-left: -30px;"/></a>
                  </div>
              </div>
@@ -216,7 +214,9 @@ $( document ).ready(function() {
        
     })
 
-
+    $(`header`).mouseleave(function() {
+        $(`.deptonav`).hide()
+    });
 
 
     let toggle = true;
@@ -314,15 +314,15 @@ $( document ).ready(function() {
             setTimeout(function(){
                 $(".link-logo img").css({"max-width": "110px"}); 
                 $(".search").removeClass("col-lg-offset-6"); 
-                $("#minimized").fadeIn( "slow" );
-                $("#original").fadeOut( "slow" );
+                $("#minimized").fadeIn( 100 );
+                $("#original").fadeOut( 100 );
                 const height = window.matchMedia("(max-height: 786px)");
                 if (height.matches) {
                   $("#top-menu").css({"top": "12%"})
                 } else {
                   $("#top-menu").css({"top": "8%"})
                 }
-            },500)
+            },1000)
         
 
           
@@ -333,7 +333,7 @@ $( document ).ready(function() {
                 $("#minimized").hide();
                 $(".search").addClass("col-lg-offset-6"); 
                 
-                $("#original").fadeIn( "slow" );
+                $("#original").fadeIn( 100 );
                 $(".link-logo img").css({"max-width": "175px"});
                 const height = window.matchMedia("(max-height: 786px)");
                 if (height.matches) {
@@ -341,7 +341,7 @@ $( document ).ready(function() {
                 } else {
                   $("#top-menu").css({"top": "14%"})
                 }
-            },500)
+            },1000)
             
          
           
@@ -358,7 +358,7 @@ $( document ).ready(function() {
 
     
     generateDiscountFlag();
-    generateSimilar();
+    //generateSimilar();
 
 
     setTimeout(()=>{

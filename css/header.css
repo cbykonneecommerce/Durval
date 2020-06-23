@@ -377,6 +377,13 @@
     .header .search .busca {
         display: none;
     }
+
+    #product-content{
+        padding-top: 13px !important;
+    }
+    .header-container {
+        padding-top: 0px !important;
+    }
 }
 
 

@@ -3,6 +3,22 @@ $(".notifymetitle.notifyme-title").text("Produto indisponível");
 $(".sku-notifyme-form p").text("Avise-me quando estiver disponível");
 
 
+accentsTidy = function(s){
+    var r=s
+   
+    r = r.replace(new RegExp("[àáâãäå]", 'g'),"a");
+    r = r.replace(new RegExp("æ", 'g'),"ae");
+    r = r.replace(new RegExp("ç", 'g'),"c");
+    r = r.replace(new RegExp("[èéêë]", 'g'),"e");
+    r = r.replace(new RegExp("[ìíîï]", 'g'),"i");
+    r = r.replace(new RegExp("ñ", 'g'),"n");                            
+    r = r.replace(new RegExp("[òóôõö]", 'g'),"o");
+    r = r.replace(new RegExp("œ", 'g'),"oe");
+    r = r.replace(new RegExp("[ùúûü]", 'g'),"u");
+    r = r.replace(new RegExp("[ýÿ]", 'g'),"y");
+    return r;
+};
+
 
 $(document).ready(function() {
     $(".product-details .seletor-sku .specification").text("ESCOLHA O TAMANHO")
@@ -136,6 +152,13 @@ setTimeout(function () {
             }
 }, 1000);
 
+
+
+setTimeout(()=>{
+    $(".glis-popup-link.glis-thickbox.tb-added.qvBinded", "body").html(`<img src="/arquivos/CORACAO.png" style="max-width: 18px"> ADICIONAR A LISTA DE DESEJOS`);
+    $(".giftlist-insertsku-must-login .glis-link", "body").html(`<img src="/arquivos/CORACAO.png" style="max-width: 18px"> ADICIONAR A LISTA DE DESEJOS`);
+},2000)
+
 $(".product-description-box #description").fadeIn()
 $(".desk-info-nav a").click((e) => {
     $(".desk-info-nav a").css({ "color": "#BEBEBE" });
@@ -187,7 +210,11 @@ setTimeout(() => {
         similares = similares[0].split(",")
         similares.unshift(`${skuJson.productId}`)
         console.log(similares)
-       
+       if(similares) {
+        if($(".specification-color ul") != undefined){
+            $(".specification-color").show()
+    }
+       }
         similares.forEach(async function(index) {
             let myId = index
             myId= parseInt(myId);
@@ -196,7 +223,7 @@ setTimeout(() => {
            await vtexjs.catalog.getProductWithVariations(myId).done(function(product){
                 console.log("montei")
                let item = product.skus[0];
-               item.link = product.name.replace(/[\s/,]+/g, '-');
+               item.link =  accentsTidy(product.name.replace(/[\s/,]+/g, '-'));
                item.cor = product.name.split('-').pop().split('-')[0].replace(/[\s/,]+/g, '');
                 let cores =`
                 <li style="display:inline-block;margin: 15px 8px">
@@ -218,7 +245,5 @@ setTimeout(() => {
     })
 
 
-    if($(".specification-color ul").html() != undefined){
-        $(".specification-color").show()
-}
+ 
 }, 200)

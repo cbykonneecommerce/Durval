@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $($(".sub")[1]).hide()
     $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
     $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
 
@@ -56,8 +57,8 @@ $(window).on('hashchange', function(e){
 $(window).on('hashchange', function(e){
     setTimeout(()=>{
         generateDiscountFlag();
-        generateSimilar();
-    },2000)
+       // generateSimilar();
+    },1000)
   
    });
 

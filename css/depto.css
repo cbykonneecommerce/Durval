@@ -88,7 +88,7 @@
 }
 
 .resultado-busca-filtro > fieldset {
-    text-transform: uppercase;
+   /* text-transform: uppercase;*/
 }
 
 #departament-navegador {
@@ -184,7 +184,8 @@ span {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        padding: 1px 10px
+        padding: 1px 10px;
+        padding-left: 22px;
     }
     .resultado-busca-filtro {
         text-align: center;
@@ -194,6 +195,7 @@ span {
     #open {
         width: 40%;
         font-size: 10px !important;
+        padding: 11px !important;
     }
     .resultado-busca-filtro > fieldset select {
       
@@ -234,7 +236,8 @@ span {
     .sub {
         background-color: white;
         position: sticky;
-        top: 96px;
+        top: 99px;
+        padding-top: 2px;
         z-index: 10;
     }
 

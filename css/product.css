@@ -30,9 +30,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-
-.codprod span, .codprod .skuReference  {
+.codprod span, .codprod .skuReference {
     display: inline-block
 }
 
@@ -53,9 +51,8 @@
 .product-details .product-name .productName {
     color: #000;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 22px;
-    
 }
 
 #opiniao_de_usuario {
@@ -77,11 +74,8 @@
 }
 
 .product-details .product-name {
-   
     margin-bottom: 0;
 }
-
-
 
 .dropbuttom .dropdown-btn {
     width: 100%;
@@ -122,7 +116,6 @@
     padding-left: 10px;
 }
 
-
 .user-review h4 {
     color: black;
     font-size: 15px !important;
@@ -130,7 +123,6 @@
     font-weight: 400 !important;
     padding-left: 1em !important;
 }
-
 
 #reviews #formUserReview .avaliar a, #reviews #lnkPubliqueResenha {
     background-color: #8D7573!important;
@@ -143,7 +135,6 @@
     text-transform: uppercase;
 }
 
-
 .product-details {
     display: flex;
     display: -webkit-flex;
@@ -154,14 +145,12 @@
     position: absolute;
     bottom: 0;
 }
+
 .glis-sku-single.glis-sku-default.unavailable, .fa.fa-lock, .glis-sku-single.glis-sku-default {
     display: none !important;
 }
 
-
-
-
-#comprar-flutuante .descricao-preco .valor-por, .product-details .price-box .descricao-preco .valor-por{
+#comprar-flutuante .descricao-preco .valor-por, .product-details .price-box .descricao-preco .valor-por {
     color: black !important;
 }
 
@@ -180,12 +169,11 @@
     text-align: left !important;
 }
 
-#comprar-flutuante .descricao-preco .valor-por strong, .product-details .price-box .descricao-preco .valor-por strong{
+#comprar-flutuante .descricao-preco .valor-por strong, .product-details .price-box .descricao-preco .valor-por strong {
     font-weight: 400;
     color: #000!important;
     font-size: 24px !important;
 }
-
 
 .prateleira .box-item {
     height: 31em !important;
@@ -194,10 +182,11 @@
 #calculoFrete {
     margin-top: -18px;
 }
+
 .product-description .buy-together-content td.buy .comprar-junto a, .buy-button.buy-button-ref {
     display: block;
     width: 100%;
-    background-color:#B0CEA9!important;
+    background-color: #B0CEA9!important;
     font-weight: bold;
     color: black !important;
     text-transform: uppercase;
@@ -216,12 +205,9 @@
     text-decoration: underline;
 }
 
-
 .product-info .shipping-box .cep-busca .bt {
     display: block;
 }
-
-
 
 .buy-button-box .box-qtd {
     display: none !important;
@@ -231,14 +217,11 @@
     border-right: 1px solid #EBEBEB !important;
     border-radius: 0;
     font-weight: bold;
-    
-
 }
 
 .rating-produto:before, .rating-demonstrativo:before, .rating-wrapper .rating:before, .rating-avalie .ratingStar.emptyRatingStar:before, .rating-avalie .ratingStar.filledRatingStar:before {
-    color:#886F3E!important
+    color: #886F3E!important
 }
-
 
 span#spnRatingProdutoTop {
     color: black;
@@ -249,6 +232,7 @@ span#spnRatingProdutoTop {
     font-weight: 600;
     text-decoration: underline;
 }
+
 .buy-button-box .box-qtd {
     float: inherit !important;
     border: 1px solid #EBEBEB;
@@ -275,9 +259,7 @@ input.qtd.pull-left {
     margin-top: 18px
 }
 
-
 .product-details .seletor-sku .specification, .specification-color {
-   
     font-weight: 300 !important;
     color: black !important;
     letter-spacing: 1px;
@@ -290,22 +272,21 @@ input.qtd.pull-left {
 }
 
 .product-info .seletor-sku .select label {
-        /* float: none !important; */
-        color: #8D7573!important;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        padding: 10px 10px !important;
-        border-radius: 100px;
-        border: 1px solid #DDD6CC!important;
-        /* border-radius: 0; */
-        margin: 5px 12px 0 0;
-        cursor: pointer;
-        -webkit-transition: 0.3s all;
-        transition: 0.3s all;
-        /* background-color: black; */
+    /* float: none !important; */
+    color: #8D7573!important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 10px 10px !important;
+    border-radius: 100px;
+    border: 1px solid #DDD6CC!important;
+    /* border-radius: 0; */
+    margin: 5px 12px 0 0;
+    cursor: pointer;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+    /* background-color: black; */
 }
-
 
 .product-info .seletor-sku .select label:hover, .product-info .seletor-sku .select label.checked, .product-info .seletor-sku .select label.sku-picked {
     background-color: white;
@@ -314,7 +295,7 @@ input.qtd.pull-left {
 }
 
 label.combination_unavaliable:after {
-    content:" X";
+    content: " X";
     color: #F00;
 }
 
@@ -322,13 +303,11 @@ label.combination_unavaliable:after {
     text-align: center;
 }
 
-
 .product-info .shipping-box label .fitext {
     color: black !important;
     background: white !important;
     border: 1px solid #8D7573!important;
     border-radius: 0px !important;
-    
 }
 
 .product-info .shipping-box .freight-btn {
@@ -346,21 +325,22 @@ label.combination_unavaliable:after {
 }
 
 .waterdropTitle img {
-   max-width: 20px;
-   background-color: white;
+    max-width: 20px;
+    background-color: white;
 }
 
 .waterdropTitle h2 {
     color: #007DA5 !important
- }
+}
 
- .user-review h4 {
-     display: none;
- }
+.user-review h4 {
+    display: none;
+}
 
- .product-description .product-description-box .title {
-     border-bottom: none !important;
- }
+.product-description .product-description-box .title {
+    border-bottom: none !important;
+}
+
 .zoomPad {
     position: relative;
     float: left;
@@ -488,7 +468,6 @@ label.combination_unavaliable:after {
     font-size: 12px;
 }
 
-
 #TB_window {
     background-color: white !important;
     border: solid 1px #EAECED !important;
@@ -511,6 +490,7 @@ label.combination_unavaliable:after {
 .glis-create {
     margin-top: 2em;
 }
+
 .glis-create-form {
     margin-top: 1em;
 }
@@ -519,13 +499,12 @@ label.combination_unavaliable:after {
     font-size: 18px;
 }
 
-
 .owl-carousel .owl-item li {
     margin-left: 1em;
     margin-right: 1em;
 }
 
-.prateleira.vitrine > ul {
+.prateleira.vitrine>ul {
     margin-left: 0px !important;
 }
 
@@ -560,16 +539,16 @@ label.item_unavaliable:after {
 
 .desk-info-nav a {
     font-size: 21px;
-    color:#BEBEBE;
+    color: #BEBEBE;
 }
+
 .desk-info-nav a:hover {
-    color:#000
+    color: #000
 }
 
 .product-description-box #description, .product-description-box #specification {
     display: none;
 }
-
 
 .modal {
     background-color: transparent !important;
@@ -620,14 +599,15 @@ label.item_unavaliable:after {
 .owl-controls .owl-pagination .owl-page.active, .owl-controls .owl-pagination .owl-page.active:hover {
     background-color: #8D7573 !important;
 }
+
 .modal-header {
     text-align: center;
 }
 
-
 #reviews .avalie-produto #opcoes-avalie label {
     display: initial;
 }
+
 #reviews .avalie-produto #opcoes-avalie .firadio {
     margin: -6px 0 0 0 !important;
 }
@@ -637,7 +617,7 @@ label.item_unavaliable:after {
         margin-left: 15%
     }
     .share-btns {
-        margin-top:36em !important
+        margin-top: 36em !important
     }
 }
 
@@ -648,17 +628,12 @@ label.item_unavaliable:after {
     .product-details .product-name {
         margin-top: 1%;
     }
-
     .buy-button-box .box-qtd {
         margin-left: 0%;
-
     }
-
     .giftlist-insertsku-popup {
         position: initial !important;
     }
-
-    
     .product-description .buy-together-content td.buy .comprar-junto a, .buy-button.buy-button-ref {
         margin-top: 0px;
         width: 100%;
@@ -669,8 +644,6 @@ label.item_unavaliable:after {
     .product-info .seletor-sku .select label {
         float: none !important;
     }
-    
-
     .modal {
         width: 100% !important;
         left: auto !important;
@@ -678,13 +651,10 @@ label.item_unavaliable:after {
     .modal-body img {
         max-width: 100% !important;
     }
-
-
     .product-info .discount p {
         top: 74px;
     }
-
-    .product-info, .product-details .avaliacoes{
+    .product-info, .product-details .avaliacoes {
         text-align: center !important;
     }
     .product-details .codigo-produto span {
@@ -694,30 +664,35 @@ label.item_unavaliable:after {
         display: inline;
         float: initial;
     }
-
     .product-description-box #description, .product-description-box #specification {
         display: block;
     }
-
     .product-info .seletor-sku .select label {
         margin: 5px 9px 0 0;
     }
-
     .tabela-de-medidas {
         margin-left: -33px;
     }
-
     .product-info .shipping-box label .fitext, .product-info .shipping-box .freight-btn {
         display: none;
     }
+    #TB_ajaxContent {
+        width: 100% !important;
+    }
+    #TB_window {
+        top: 53% !important;
+        left: 0 !important;
+        margin-left: 16px !important;
+        width: 90% !important;
+    }
+    #TB_closeWindowButton {
+        color: #836c6a !important;
+    font-weight: 700 !important;
+    }
 }
-
 
 @media (min-width: 992px) {
-
-.product-image .apresentacao .thumbs {
-    
-    left: -90px !important;
-}
-
+    .product-image .apresentacao .thumbs {
+        left: -90px !important;
+    }
 }

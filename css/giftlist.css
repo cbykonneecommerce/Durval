@@ -15,11 +15,15 @@
 }
 
 #menu-giftlist ul li {
-    background-color: #000 !important;
+    background-color: #8D7573 !important;
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
 
+}
+
+.nav>li>a:hover {
+    background-color: transparent !important;
 }
 
 #giftlistform .basic label, #giftlistform .image label, #giftlistform #members-box fieldset label, #giftlistform .event fieldset  .giftlistul label{
@@ -177,7 +181,7 @@ legend {
  
 
 .giftlist-table .giftlist-header {
-    border-bottom: solid 1px #000;
+    border-bottom: solid 1px #8D7573;
 }
 
 .giftlist-header tr th {
@@ -191,7 +195,7 @@ legend {
 }
 
 .page-number {
-    background-color: #000 !important;
+    background-color: #8D7573 !important;
 }
 #gift-manager {
     padding-left: 1em;
@@ -234,7 +238,7 @@ legend {
 }
 
 #giftlistsearchfind{
-    background-color: #000;
+    background-color: #8D7573;
     color: white !important;
     border: none;
     outline-style: none;
@@ -265,7 +269,7 @@ legend {
     margin-top: 0;
 }
   #glstc-10 {
-    background-color: #919fc2;
+    background-color: #8D7573;
     text-decoration: none;
     padding: 1em;
     margin-top: 2em;
@@ -331,7 +335,7 @@ legend {
   #giftlistv2save, #giftlistv2cancel {
     width: 89%;
     margin-top: 1em;
-    background-color: #000;
+    background-color: #8D7573;
     color: white;
   }
 
@@ -357,7 +361,7 @@ legend {
     padding-left: 3.5em;
     padding-right: 3.5em;
     color: white;
-    border: solid 1px #000;
+    border: solid 1px #8D7573;
     font-size: 20px;
     padding-top: 0.6em;
     padding-bottom: 0.6em;
@@ -417,7 +421,7 @@ td{
 }
 
 .action-buy a, .button-send-to-cart, .giftlistinfo-actions .list-action li a{
-    background-color: #000;
+    background-color: #8D7573;
     border: 0 none;
     border-radius: 6px;
     line-height: 44px;
@@ -441,7 +445,7 @@ td{
 
 
 .buy-buttom {
-    background: #919fc2
+    background: #8D7573
 }
 .buy-buttom a{
     color: white !important;
