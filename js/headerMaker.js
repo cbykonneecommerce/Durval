@@ -31,7 +31,7 @@ for(let i = 0; i < product.skus.length; i++){
 
 if(hasdiscount) {
     let discount = relDiff(newprice, oldprice).toFixed();
-    $(me).prepend(`<span style="position: relative;
+    $(me).prepend(`<span class="discount-flag" style="position: relative;
     z-index: 8;
     font-size: 10px;
     top: 18px;
@@ -43,7 +43,7 @@ if(hasdiscount) {
     padding-top: 10px;
     margin-bottom: -8px;">${discount}%<br/>OFF</span>`)
 } else {
-    $(me).prepend(`<span style="    position: relative;
+    $(me).prepend(`<span class="discount-flag" style="    position: relative;
     z-index: 8;
     float: right;
     border-radius: 100px;

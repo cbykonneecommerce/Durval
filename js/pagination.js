@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $($(".sub")[1]).hide()
     $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
     $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
@@ -16,58 +16,58 @@ $(document).ready(function() {
         font-size: 12px;">FILTROS</a>`);
 
 
-        
-  let qtd = $(".resultado-busca-numero");
-  $(".resultado-busca-numero").remove();
-  $(".resultado-busca-filtro").append(qtd[0]);
-  $(".resultado-busca-numero").attr("style","margin:10px 21px 0px 68px")
-  
-  $(".resultado-busca-filtro").append(qtd[0]);
-  $(".resultado-busca-numero").attr("style","margin:10px 21px 0px 68px")
+
+        let qtd = $(".resultado-busca-numero");
+        $(".resultado-busca-numero").remove();
+        $(".resultado-busca-filtro").append(qtd[0]);
+        $(".resultado-busca-numero").attr("style", "margin:10px 21px 0px 68px")
+
+        $(".resultado-busca-filtro").append(qtd[0]);
+        $(".resultado-busca-numero").attr("style", "margin:10px 21px 0px 68px")
 
     }
- 
 
-    
+
+
 });
 
-$(window).on('hashchange', function(e){
+$(window).on('hashchange', function (e) {
 
     $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
     $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
 
-   });
-   $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
-   $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
+});
+$(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>")
+$(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>")
 
-   setInterval(()=>{
+setInterval(() => {
     $(".pages li.previous", "body").html("<img style='max-width:35px' src='/arquivos/seta-esquerda.png'/>");
     $(".pages li.next", "body").html("<img style='max-width:35px' src='/arquivos/seta-direita.png'/>");
-   }, 1000)
-
-
-
- 
+}, 1000)
 
 
 
 
- 
- 
-$(window).on('hashchange', function(e){
-    setTimeout(()=>{
-        generateDiscountFlag();
-       // generateSimilar();
-    },1000)
-  
-   });
 
-
-   $("#vermaisbtn").click(()=>{
-       $(".hidden-content").show();
-       $("#vermaisbtn").hide();
-   })
+setInterval(() => {
+    $(".discount-flag").remove();
+    generateDiscountFlag();
+    // generateSimilar();
+}, 1000)
 
 
 
+
+$(window).on('hashchange', function (e) {
    
+
+});
+
+
+$("#vermaisbtn").click(() => {
+    $(".hidden-content").show();
+    $("#vermaisbtn").hide();
+})
+
+
+
