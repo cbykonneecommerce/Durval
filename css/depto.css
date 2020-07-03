@@ -76,6 +76,7 @@
     font-size: 12px !important;
     text-transform: uppercase;
     color:#8B8B8B !important;
+    visibility: hidden;
 }
 
 #admake-advanced-filter > h2  {
@@ -286,7 +287,11 @@ span {
     #sidenavCTR {
         display: none;
     }
-
+    .filter-pill {
+        width: 14%;
+        display: inline-block;
+        margin-right: 10px;
+    }
     
 }
 

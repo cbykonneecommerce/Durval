@@ -546,6 +546,21 @@ label.item_unavaliable:after {
     color: #000
 }
 
+.glis-mylist.mode-list {
+    margin-top: 2em;
+}
+
+.glis-li {
+    margin-top: 10px;
+}
+.glis-title{
+    font-size: 21px
+}
+
+.glis-mylist.mode-list  ul li a, #TB_closeWindowButton {
+    color: #8D7573 !important;
+    font-weight: 600;
+}
 .product-description-box #description, .product-description-box #specification {
     display: none;
 }
@@ -619,6 +634,8 @@ label.item_unavaliable:after {
     .share-btns {
         margin-top: 36em !important
     }
+
+    
 }
 
 @media screen and (max-width: 800px) {

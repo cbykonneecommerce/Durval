@@ -286,7 +286,7 @@ $( document ).ready(function() {
 
     
 
-       $(`.header .search .busca`).mouseleave(function() {
+      /* $(`.header .search .busca`).mouseleave(function() {
 
         
             $(".header .search .fulltext-search-box").animate({
@@ -304,7 +304,7 @@ $( document ).ready(function() {
         $(".header .search .btn-buscar").attr("style","border-bottom:transparent !important")
        
        
-    });
+    });*/
        
     }
 
@@ -378,7 +378,27 @@ $( document ).ready(function() {
 
 
 //$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
-    },1000)
+
+$(".depto-Outlet a").attr("href", "/noiva/sim?map=c,specificationFilter_40")
+
+for(let i=0; i < 4; i++){
+let cat = $($("#Outlet ul li a")[i]).text();
+if(cat == "Acessórios" ) {
+    $($("#Outlet ul li a")[i]).attr("href", "/acessorios/sim?map=c,specificationFilter_41");
+} else if(cat == "Festa") {
+    $($("#Outlet ul li a")[i]).attr("href", "/festa/sim?map=c,specificationFilter_42");
+} else if(cat == "Noiva"){
+    $($("#Outlet ul li a")[i]).attr("href", "/noiva/sim?map=c,specificationFilter_40")
+} else if(cat == "Noivo") {
+    $($("#Outlet ul li a")[i]).attr("href", "/noivo/sim?map=c,specificationFilter_43")
+}
+}
+
+    },1200)
+
+
+
+    $(".header .mini-cart").hover(()=>{$(".deptonav").hide()})
 });
 
 

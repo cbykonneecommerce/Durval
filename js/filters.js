@@ -26,8 +26,13 @@ setTimeout(function(){
           }
         $(`#admake-advanced-filter > .box-filtro.filtro-${me} .opcoes`).slideUp();
     })
-}, 1000)
 
+    $("#admake-advanced-filter").css({"visibility":"visible"});
+}, 700)
+
+setTimeout(()=>{
+  $("#admake-advanced-filter").css({"visibility":"visible"});
+},1200)
 
 
 //COISAS PRA FICAR IGUAL O LAYOUT
@@ -74,4 +79,35 @@ if (mq.matches) {
 
 } else {
   $(".resultado-busca-filtro").prepend($(".searchResultsTime").html());
+
+
+  setTimeout(()=>{
+    $("#mySidenav").prepend("<span style='font-weight: 400 !important;color: #8B8B8B !important;text-transform: uppercase;font-size: 12px;'>Filtros selecionados:</span>")
+  
+    if($(" #admake-advanced-filter  .filtro-ativo").length && !($(" #admake-advanced-filter  span").length) ) {
+      $(".active-filters").prepend(`<span>FILTROS SELECIONADOS:</span>`)
+    }
+    for(let i = 0; i <  $(" #admake-advanced-filter  .filtro-ativo").length; i++) {
+      let texto =  $($(" #admake-advanced-filter  .filtro-ativo")[i]).text();
+      
+      let link = $($(" #admake-advanced-filter  .filtro-ativo")[i]).next().attr("href");
+      console.log(link)
+        $(".active-filters").append(`<div class="filter-pill">${texto} <a class="filter-pill-remover" href=${link}></a> </div>`)
+    }
+  
+  },1000)
+  $(window).on('hashchange', function(e){
+    $(".active-filters").html("")
+    if($(" #admake-advanced-filter  .filtro-ativo").length && !($(" #admake-advanced-filter  span").length) ) {
+      $(".active-filters").prepend(`<span>FILTROS SELECIONADOS:</span>`)
+    }
+    for(let i = 0; i <  $(" #admake-advanced-filter  .filtro-ativo").length; i++) {
+      let texto =  $($(" #admake-advanced-filter  .filtro-ativo")[i]).text();
+      
+      let link = $($(" #admake-advanced-filter  .filtro-ativo")[i]).next().attr("href");
+      console.log(link)
+        $(".active-filters").append(`<div class="filter-pill">${texto} <a class="filter-pill-remover" href=${link}></a> </div>`)
+    }
+  })
+  
 }
