@@ -146,10 +146,10 @@ span {
 }
 
 .filter-pill {
-    background-color: #8D7573 !important;
+    background-color: #DDD6CC !important;
     font-weight: 400 !important;
     color: #fff;
-    padding: 10px;
+    padding: 6px;
     display: block;
     margin-bottom: 5px;
     margin-top: 5px;
@@ -199,6 +199,7 @@ span {
     .resultado-busca-filtro {
         text-align: center;
         margin-top: 0em;
+        margin-left: 2em;
     }
 
     #open {
@@ -252,7 +253,7 @@ span {
     }
 
     .resultado-busca-filtro > fieldset {
-        margin-right: 0px !important;
+        margin-left: 10px !important;
     }
 
     .resultado-busca-filtro > fieldset.filterBy {
@@ -291,6 +292,11 @@ span {
         width: 14%;
         display: inline-block;
         margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .active-filters {
+        display: inline;
     }
     
 }

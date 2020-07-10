@@ -197,7 +197,7 @@ $(".dropdown-btn#especificacao").toggle(() => {
 
 setTimeout(() => {
     
-    fetch(`/api/catalog_system/pub/products/search/${skuJson.name}`)
+    fetch(`/api/catalog_system/pub/products/search/${skuJson.name.split(' - ')[1]}`)
     .then((a) =>  a.json())
     .then(dados => {
         console.log(dados)

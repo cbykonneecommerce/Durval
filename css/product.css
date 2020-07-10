@@ -466,6 +466,7 @@ label.combination_unavaliable:after {
     color: #8D7573 !important;
     text-decoration: none !important;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 #TB_window {
@@ -474,10 +475,10 @@ label.combination_unavaliable:after {
 }
 
 .glis-form-name, .glis-newlisttype {
-    background-color: #EAECED;
+    background-color: white;
     /* height: 38px; */
     border-radius: 0px;
-    border-color: white;
+    border-color: #8D7573!important;
     /* font-size: 12px; */
     color: black;
     font-family: "Lato";

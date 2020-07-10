@@ -31,6 +31,8 @@ setTimeout(function(){
 }, 700)
 
 setTimeout(()=>{
+
+  $(".filtro-marca .sub-titulo h3").html(`COLEÇÃO  <img src="/arquivos/seta-baixo.png" style="max-width: 26px;float: right; margin-top: -18px;opacity: 0.5;"/>`)
   $("#admake-advanced-filter").css({"visibility":"visible"});
 },1200)
 
