@@ -17,3 +17,15 @@ $("#giftlistname").keyup(function () {
 ​
 ​
 });
+
+
+
+$($(".giftlistproductsv2 thead tr th")[3]).remove();
+$($(".giftlistproductsv2 tbody tr td")[3]).remove();
+$("#giftlistorder").remove();
+
+const mq = window.matchMedia("(min-width: 800px)");
+    if (mq.matches) {
+
+      $($(".giftlistproductsv2 tbody tr td")[1]).css({"width":"238px"});
+    }

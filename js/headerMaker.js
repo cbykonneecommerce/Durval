@@ -135,7 +135,7 @@ $( document ).ready(function() {
         response.forEach(element => {
             let divtext =  element.name;
             element.name = element.name.replace(/[\s/,&]+/g, '-');
-            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}">${divtext}</a></li>`);
+            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}?O=OrderByScoreDESC">${divtext}</a></li>`);
             console.log("adding main")
             if(element.hasChildren) {
             $("#top-menu .container #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
@@ -160,7 +160,7 @@ $( document ).ready(function() {
              </div>
             </div>`);
 
-            $(".sidenav").append(`<div style="display:block;border-top: solid 1px #E4E5E9;"><span class="depto-${element.name}"><a href="${element.url}">${divtext}</a></span><button class="dropdown-btn" id="${element.name}"><i class="fa fa-angle-down"></i></button></div>
+            $(".sidenav").append(`<div style="display:block;border-top: solid 1px #E4E5E9;"><span class="depto-${element.name}"><a href="${element.url}?O=OrderByScoreDESC">${divtext}</a></span><button class="dropdown-btn" id="${element.name}"><i class="fa fa-angle-down"></i></button></div>
             <div class="dropdown-container" id="${element.name}"></div>`);
 
 
@@ -191,14 +191,14 @@ $( document ).ready(function() {
             element.children.forEach((subs, index) => {
                 console.log("adding children")
                 if( index < 4) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}?O=OrderByScoreDESC">${subs.name}</a></li>`);
                 } else if (index < 8) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}?O=OrderByScoreDESC">${subs.name}</a></li>`);
                 } else {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}?O=OrderByScoreDESC">${subs.name}</a></li>`);
                 }
 
-                $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}">${subs.name}</a>`)
+                $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}?O=OrderByScoreDESC">${subs.name}</a>`)
                 
             })
             
@@ -379,8 +379,8 @@ $( document ).ready(function() {
 
 //$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
 
-$(".depto-Outlet a").attr("href", "/noiva/sim?map=c,specificationFilter_40")
-
+$(".deptos .depto-Outlet a").attr("href", "")
+$(".deptos .depto-Outlet a").click(e=>{ e.preventDefault()})
 for(let i=0; i < 4; i++){
 let cat = $($("#Outlet ul li a")[i]).text();
 if(cat == "Acessórios" ) {
