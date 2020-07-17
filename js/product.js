@@ -223,7 +223,7 @@ setTimeout(() => {
            await vtexjs.catalog.getProductWithVariations(myId).done(function(product){
                 console.log("montei")
                let item = product.skus[0];
-               item.link =  accentsTidy(product.name.replace(/[\s/,]+/g, '-'));
+               item.link =  accentsTidy(product.name.replace(/[\s./,]+/g, '-'));
                item.cor = product.name.split('-').pop().split('-')[0].replace(/[\s/,]+/g, '');
                 let cores =`
                 <li style="display:inline-block;margin: 15px 8px">
